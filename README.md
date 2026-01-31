@@ -1,6 +1,6 @@
 # Zebra Puzzle Generator for LLM Testing
 
-A comprehensive system for generating zebra puzzles to test and evaluate Large Language Models (LLMs) on logical reasoning tasks.
+A Gurobi-based system for generating zebra puzzles to test and evaluate Large Language Models (LLMs) on logical reasoning tasks.
 
 ---
 
@@ -14,32 +14,13 @@ This project generates zebra puzzles (logic grid puzzles) as **evaluation data f
 
 ---
 
-## ⭐ New: Natural Language Clues
-
-Our generator now creates **conversational clues** similar to Brainzilla.com!
-
-**Before:**
-```
-"The person with Height=130 also has Nationality=Englishman"
-```
-
-**After:**
-```
-"The Englishman lives in the Red house."
-"The person who smokes Pall Mall rears Birds."
-```
-
-This natural language format provides more realistic evaluation data for LLMs.
-
----
-
 ## 🚀 Quick Start
 
 ```python
 import json
 
 # Load test puzzles for LLM evaluation
-with open('zebra_puzzles_natural.json', 'r', encoding='utf-8') as f:
+with open('zebra_puzzles_gurobi_100.json', 'r', encoding='utf-8') as f:
     puzzles = json.load(f)
 
 # Example: Test LLM on first puzzle
@@ -53,78 +34,60 @@ print(f"\nGold Standard Solution: {puzzle['solution']}")
 
 ---
 
-## 📊 Generated Datasets
+## 📊 Generated Dataset
 
 | Dataset | Puzzles | Clues | Style | Purpose |
 |---------|---------|-------|-------|---------|
-| **Natural** ⭐ | 50 | 9.2 avg | Conversational | LLM evaluation (human-like) |
-| Simple | 100 | 9.6 avg | Mechanical | Baseline testing |
-| Gurobi | 99 | 15-25 | Mechanical | Complex reasoning |
+| **Gurobi** | 99 | 15-25 avg | Mechanical | Complex reasoning testing |
 
-**Total:** 249 unique puzzles with gold standard solutions
+All puzzles generated with professional optimization solver (Gurobi) and guaranteed unique solutions.
 
 ---
 
-## 🛠️ Generator Scripts
+## 🛠️ Generator
 
-### 1. Natural Language Generator ⭐
-
-```bash
-python generate_natural_clues.py --generate 50
-```
-
-**Features:**
-- Natural language templates (5 types)
-- Brainzilla-style conversational clues
-- Grammatically correct output
-- Perfect for LLM evaluation
-
-### 2. Simple Generator
-
-```bash
-python generate_100_simple.py
-```
-
-**Features:**
-- No external dependencies
-- Mechanical clue format
-- 100% success rate
-- Fast generation
-
-### 3. Gurobi Generator
+### Gurobi-Based Generator
 
 ```bash
 python generate_100_with_gurobi.py
 ```
 
+**Requirements:**
+- Valid Gurobi license
+- Python 3.x
+- Gurobi Python package (`gurobipy`)
+
 **Features:**
-- Professional optimization solver
-- Complex puzzles (15-25 clues)
-- Fixed positional constraints
-- Requires Gurobi license
+- Professional optimization solver (Gurobi Optimizer)
+- Complex puzzles (15-25 clues per puzzle)
+- Fixed positional constraints (bug-free implementation)
+- Guaranteed unique solutions via constraint satisfaction
+- 99% success rate
 
 ---
 
 ## 📋 Why Use This for LLM Testing?
 
 ### 1. **Controlled Reasoning Complexity**
-- Easy (3 houses, 6 clues) to Hard (4 houses, 25 clues)
+- 3-4 persons per puzzle
+- 15-25 clues per puzzle (complex multi-step reasoning)
 - Ground truth solutions for exact evaluation
-- Measurable difficulty progression
+- Consistent puzzle format
 
 ### 2. **Diverse Reasoning Types**
 - Positive associations ("X has Y")
 - Negative constraints ("X does not have Y")
-- Positional reasoning ("X is left of Y")
-- Multi-step deductions
+- Positional reasoning ("X is left of Y", "X is next to Y")
+- Multi-step deductions required
 
-### 3. **Natural Language Evaluation**
-- Conversational clue format tests real-world understanding
-- Varied phrasing prevents overfitting
-- Grammar and coherence assessment
+### 3. **Quality Guaranteed**
+- Gold standard solutions (exactly one valid solution)
+- All clues verified and consistent
+- Professional constraint satisfaction solver
+- Unique solution guarantee
 
 ### 4. **Scalable Benchmark Data**
-- Generate unlimited puzzles
+- Generate unlimited puzzles with Gurobi
 - Customizable difficulty levels
 - Consistent format for automated testing
 
@@ -136,11 +99,13 @@ python generate_100_with_gurobi.py
 import json
 
 # Load test puzzles
-with open('zebra_puzzles_natural.json') as f:
+with open('zebra_puzzles_gurobi_100.json') as f:
     puzzles = json.load(f)
 
 # Test LLM (pseudo-code)
 correct = 0
+total = len(puzzles)
+
 for puzzle in puzzles:
     # Get LLM solution
     llm_solution = your_llm.solve(puzzle['clues'])
@@ -149,23 +114,19 @@ for puzzle in puzzles:
     if llm_solution == puzzle['solution']:
         correct += 1
 
-accuracy = correct / len(puzzles)
-print(f"LLM Accuracy: {accuracy:.1%}")
+accuracy = correct / total
+print(f"LLM Accuracy: {accuracy:.1%} ({correct}/{total} puzzles)")
 ```
 
 ---
 
 ## 📁 Project Files
 
-**Generator Scripts:**
-- `generate_natural_clues.py` - Natural language generator ⭐
-- `generate_100_simple.py` - Simple generator (no Gurobi)
-- `generate_100_with_gurobi.py` - Gurobi generator (requires license)
+**Generator:**
+- `generate_100_with_gurobi.py` - Gurobi-based generator ⭐
 
-**Generated Datasets:**
-- `zebra_puzzles_natural.json` - 50 natural puzzles ⭐
-- `zebra_puzzles_100_simple.json` - 100 mechanical puzzles
-- `zebra_puzzles_gurobi_100.json` - 99 complex mechanical puzzles
+**Generated Dataset:**
+- `zebra_puzzles_gurobi_100.json` - 99 complex puzzles with gold solutions
 
 **Tools:**
 - `analyze_puzzles.py` - Statistics and analysis
@@ -175,26 +136,7 @@ print(f"LLM Accuracy: {accuracy:.1%}")
 - `numbered_entity.json` - Numbered entities (positions, ages)
 
 **Documentation:**
-- `NATURAL_CLUES_COMPARISON.md` - Natural language guide
-- `COMPLETE_DELIVERY_SUMMARY.md` - Technical details
-
----
-
-## 🎨 Natural Clue Examples
-
-**Direct:** "The Brit lives in the Red house."
-**Complex:** "The person who smokes Pall Mall rears Birds."
-**Positional:** "The Norwegian lives in the first house."
-**Negative:** "The Brazilian does not live in house two."
-
----
-
-## 📊 Statistics
-
-- **Total Puzzles Generated:** 249
-- **Success Rate:** 99.6%
-- **Puzzle Sizes:** 3-4 persons, 4-6 dimensions
-- **Generation Time:** ~40-90 seconds per 100 puzzles
+- `COMPLETE_DELIVERY_SUMMARY.md` - Technical details and methodology
 
 ---
 
@@ -203,13 +145,42 @@ print(f"LLM Accuracy: {accuracy:.1%}")
 ### Constraint Satisfaction
 All puzzles use CSP (Constraint Satisfaction Problem) formulation:
 - Binary variables: `var[p][r][c]` = 1 if person p has attribute c in dimension r
+- Solved with Gurobi optimizer (professional-grade solver)
 - Guaranteed unique solutions
 - Verified solvability
+
+### Positional Constraints (FIXED)
+This generator includes a **critical bug fix** for positional constraints:
+
+**Original Bug:**
+```python
+# WRONG: Static comparison
+position_value * sum(binary_vars) <= position_value * sum(binary_vars)
+```
+
+**Fixed Version (implemented here):**
+```python
+# CORRECT: Dynamic position calculation
+pos_c1 = quicksum(position_values[p] * var[p][r1][c1] for p in range(num_persons))
+pos_c2 = quicksum(position_values[p] * var[p][r2][c2] for p in range(num_persons))
+m.addConstr(pos_c1 + 1 <= pos_c2)  # c1 is left of c2
+```
 
 ### Key Features
 - **Gold Standard Solutions:** Every puzzle has exactly one valid solution
 - **Verified Clues:** All clues consistent with solution
-- **Multiple Templates:** 5 natural language templates prevent overfitting
+- **Professional Solver:** Uses Gurobi optimization for constraint satisfaction
+- **Fixed Positional Bugs:** Correct encoding of left/right positional constraints
+
+---
+
+## 📊 Statistics
+
+- **Total Puzzles Generated:** 99
+- **Success Rate:** 99% (1 failed to find unique solution)
+- **Puzzle Sizes:** 3-4 persons, 4-6 dimensions
+- **Clues per Puzzle:** 15-25 (complex reasoning)
+- **Generation Time:** ~90 seconds for 100 puzzles
 
 ---
 
@@ -219,7 +190,7 @@ If you use this generator or dataset in your research:
 
 ```bibtex
 @misc{zebra_puzzle_generator_2025,
-  title={Zebra Puzzle Generator for LLM Testing},
+  title={Zebra Puzzle Generator for LLM Testing Using Gurobi Optimization},
   author={Your Name},
   year={2025},
   url={https://github.com/johnmclain1989ai/REPO_NAME}
@@ -236,10 +207,21 @@ Contributions welcome! Areas for improvement:
 - Conditional clues ("If X, then Y")
 - Difficulty estimation metrics
 - LLM evaluation benchmarks
+- Alternative constraint solvers (CP-SAT, OR-Tools, etc.)
+
+---
+
+## 📝 License
+
+This project is provided for research and educational purposes.
+
+**Requirements:**
+- Gurobi license (https://www.gurobi.com/)
+- Academic license available for research use
 
 ---
 
 **Generated:** 2025-01-31
-**Version:** 2.0 (Natural Language Clues)
+**Version:** 2.0 (Gurobi-Based with Fixed Positional Constraints)
 **Purpose:** LLM Evaluation & Testing
 **Status:** Production Ready
