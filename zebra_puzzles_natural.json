@@ -1,0 +1,7824 @@
+[
+  {
+    "puzzle_id": 4000,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "SocialMediaPlatform",
+      "Interested HistoricalEvent"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "David",
+        "Charles"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Instagram",
+        "Facebook",
+        "TikTok",
+        "Twitter"
+      ],
+      [
+        "World War I",
+        "American Civil War",
+        "World War II",
+        "French Revolution"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person with 145 uses Instagram.",
+      "The person with 140 has World War I.",
+      "The person with Twitter has American Civil War.",
+      "The person with American Civil War does not prefer Facebook.",
+      "The person with Albert lives somewhere to the left of the person with Charles.",
+      "The person with Bernard lives somewhere to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 145,
+        "dim2": "SocialMediaPlatform",
+        "attr2": "Instagram",
+        "text": "The person with 145 uses Instagram."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Interested HistoricalEvent",
+        "attr2": "World War I",
+        "text": "The person with 140 has World War I."
+      },
+      {
+        "type": "positive",
+        "dim1": "SocialMediaPlatform",
+        "attr1": "Twitter",
+        "dim2": "Interested HistoricalEvent",
+        "attr2": "American Civil War",
+        "text": "The person with Twitter has American Civil War."
+      },
+      {
+        "type": "negative",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "American Civil War",
+        "dim2": "SocialMediaPlatform",
+        "attr2": "Facebook",
+        "text": "The person with American Civil War does not prefer Facebook."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives somewhere to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives somewhere to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "David",
+        "Charles"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "TikTok",
+        "Twitter",
+        "Facebook",
+        "Instagram"
+      ],
+      [
+        "French Revolution",
+        "American Civil War",
+        "World War I",
+        "World War II"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4001,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "ClothingBrand",
+      "JobTitle"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Bernard",
+        "David",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "H&M",
+        "Adidas",
+        "Nike",
+        "Zara"
+      ],
+      [
+        "Marketing Manager",
+        "Graphic Designer",
+        "Software Engineer",
+        "Data Scientist"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 3 uses Zara.",
+      "The person with 4 has Marketing Manager.",
+      "The person with Adidas has Software Engineer.",
+      "The person with Data Scientist does not have 1.",
+      "The person with H&M does not have Graphic Designer.",
+      "The person with 4 does not have Software Engineer.",
+      "The person with David lives directly to the left of the person with Albert.",
+      "The person with David lives directly to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "ClothingBrand",
+        "attr2": "Zara",
+        "text": "The person with 3 uses Zara."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "JobTitle",
+        "attr2": "Marketing Manager",
+        "text": "The person with 4 has Marketing Manager."
+      },
+      {
+        "type": "positive",
+        "dim1": "ClothingBrand",
+        "attr1": "Adidas",
+        "dim2": "JobTitle",
+        "attr2": "Software Engineer",
+        "text": "The person with Adidas has Software Engineer."
+      },
+      {
+        "type": "negative",
+        "dim1": "JobTitle",
+        "attr1": "Data Scientist",
+        "dim2": "LinePosition",
+        "attr2": 1,
+        "text": "The person with Data Scientist does not have 1."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothingBrand",
+        "attr1": "H&M",
+        "dim2": "JobTitle",
+        "attr2": "Graphic Designer",
+        "text": "The person with H&M does not have Graphic Designer."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "JobTitle",
+        "attr2": "Software Engineer",
+        "text": "The person with 4 does not have Software Engineer."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Albert",
+        "text": "The person with David lives directly to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Albert",
+        "text": "The person with David lives directly to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Bernard",
+        "David",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Adidas",
+        "Nike",
+        "Zara",
+        "H&M"
+      ],
+      [
+        "Software Engineer",
+        "Graphic Designer",
+        "Data Scientist",
+        "Marketing Manager"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4002,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "FavoriteCelebrity",
+      "Holiday"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Beyonc茅",
+        "Angelina Jolie"
+      ],
+      [
+        "Halloween",
+        "Christmas",
+        "Thanksgiving",
+        "New Year's Eve"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person who has Beyonc茅 has 2.",
+      "The person with 3 has Thanksgiving.",
+      "The person who has Tom Hanks has Halloween.",
+      "The person with Angelina Jolie does not have 4.",
+      "The person with Thanksgiving does not have Tom Hanks.",
+      "The person with Charles lives to the left of the person with David.",
+      "The person with Bernard lives in the third house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Beyonc茅",
+        "text": "The person who has Beyonc茅 has 2."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with 3 has Thanksgiving."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteCelebrity",
+        "attr1": "Tom Hanks",
+        "dim2": "Holiday",
+        "attr2": "Halloween",
+        "text": "The person who has Tom Hanks has Halloween."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteCelebrity",
+        "attr1": "Angelina Jolie",
+        "dim2": "House Num",
+        "attr2": 4,
+        "text": "The person with Angelina Jolie does not have 4."
+      },
+      {
+        "type": "negative",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Tom Hanks",
+        "text": "The person with Thanksgiving does not have Tom Hanks."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the third house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Angelina Jolie",
+        "Beyonc茅",
+        "Leonardo DiCaprio",
+        "Tom Hanks"
+      ],
+      [
+        "New Year's Eve",
+        "Christmas",
+        "Thanksgiving",
+        "Halloween"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4003,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteRestaurant",
+      "Pet"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "KFC",
+        "Burger King",
+        "McDonald's"
+      ],
+      [
+        "Cat",
+        "Fish",
+        "Dog"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 130 has KFC.",
+      "The person with 135 has Cat.",
+      "The person with KFC has Dog.",
+      "The person with KFC does not i 140.",
+      "The person with Burger King does not has a height of 130.",
+      "The person with Burger King does not has a height of 130.",
+      "The person with Charles lives somewhere to the left of the person with Bernard.",
+      "The person with Albert lives somewhere to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FavoriteRestaurant",
+        "attr2": "KFC",
+        "text": "The person with 130 has KFC."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "Pet",
+        "attr2": "Cat",
+        "text": "The person with 135 has Cat."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteRestaurant",
+        "attr1": "KFC",
+        "dim2": "Pet",
+        "attr2": "Dog",
+        "text": "The person with KFC has Dog."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteRestaurant",
+        "attr1": "KFC",
+        "dim2": "Height",
+        "attr2": 140,
+        "text": "The person with KFC does not i 140."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteRestaurant",
+        "attr1": "Burger King",
+        "dim2": "Height",
+        "attr2": 130,
+        "text": "The person with Burger King does not has a height of 130."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteRestaurant",
+        "attr1": "Burger King",
+        "dim2": "Height",
+        "attr2": 130,
+        "text": "The person with Burger King does not has a height of 130."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives somewhere to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "KFC",
+        "McDonald's",
+        "Burger King"
+      ],
+      [
+        "Dog",
+        "Cat",
+        "Fish"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4004,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FurnitureType",
+      "Favorite Subject"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Sofa",
+        "Chair",
+        "Coffee Table"
+      ],
+      [
+        "Mathematics",
+        "English",
+        "History"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person with 130 has Sofa.",
+      "The person with 140 has History.",
+      "The person who has Chair has English.",
+      "The person with Chair does not have History.",
+      "The person with Charles lives somewhere to the left of the person with Bernard.",
+      "The person with Albert lives to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FurnitureType",
+        "attr2": "Sofa",
+        "text": "The person with 130 has Sofa."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Favorite Subject",
+        "attr2": "History",
+        "text": "The person with 140 has History."
+      },
+      {
+        "type": "positive",
+        "dim1": "FurnitureType",
+        "attr1": "Chair",
+        "dim2": "Favorite Subject",
+        "attr2": "English",
+        "text": "The person who has Chair has English."
+      },
+      {
+        "type": "negative",
+        "dim1": "FurnitureType",
+        "attr1": "Chair",
+        "dim2": "Favorite Subject",
+        "attr2": "History",
+        "text": "The person with Chair does not have History."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Sofa",
+        "Chair",
+        "Coffee Table"
+      ],
+      [
+        "Mathematics",
+        "English",
+        "History"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4005,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "ClothingBrand",
+      "College",
+      "ClothTypes"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Bernard",
+        "David",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Nike",
+        "Zara",
+        "H&M",
+        "Adidas"
+      ],
+      [
+        "Harvard University",
+        "Stanford University",
+        "University of Oxford",
+        "MIT"
+      ],
+      [
+        "Hoodie",
+        "T-shirt",
+        "Jeans",
+        "Sweater"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 23 prefers Adidas.",
+      "The person with 23 has MIT.",
+      "The person with 23 has Jeans.",
+      "The person who has MIT uses Adidas.",
+      "The person with Nike has T-shirt.",
+      "The person with MIT has Jeans.",
+      "The person with 20 does not have MIT.",
+      "The person with 21 does not have University of Oxford.",
+      "The person with Nike does not have MIT.",
+      "The person with Charles lives in the position 23 house.",
+      "The person with Bernard lives to the left of the person with Charles."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "ClothingBrand",
+        "attr2": "Adidas",
+        "text": "The person with 23 prefers Adidas."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with 23 has MIT."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "ClothTypes",
+        "attr2": "Jeans",
+        "text": "The person with 23 has Jeans."
+      },
+      {
+        "type": "positive",
+        "dim1": "ClothingBrand",
+        "attr1": "Adidas",
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person who has MIT uses Adidas."
+      },
+      {
+        "type": "positive",
+        "dim1": "ClothingBrand",
+        "attr1": "Nike",
+        "dim2": "ClothTypes",
+        "attr2": "T-shirt",
+        "text": "The person with Nike has T-shirt."
+      },
+      {
+        "type": "positive",
+        "dim1": "College",
+        "attr1": "MIT",
+        "dim2": "ClothTypes",
+        "attr2": "Jeans",
+        "text": "The person with MIT has Jeans."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with 20 does not have MIT."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "College",
+        "attr2": "University of Oxford",
+        "text": "The person with 21 does not have University of Oxford."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothingBrand",
+        "attr1": "Nike",
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with Nike does not have MIT."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Charles",
+        "text": "The person with Charles lives in the position 23 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives to the left of the person with Charles."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Bernard",
+        "David",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Zara",
+        "Nike",
+        "H&M",
+        "Adidas"
+      ],
+      [
+        "University of Oxford",
+        "Harvard University",
+        "Stanford University",
+        "MIT"
+      ],
+      [
+        "Hoodie",
+        "T-shirt",
+        "Sweater",
+        "Jeans"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4006,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteBook",
+      "University",
+      "FavoriteBook",
+      "movie type"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Pride and Prejudice",
+        "1984",
+        "The Great Gatsby"
+      ],
+      [
+        "MIT",
+        "Stanford University",
+        "Harvard University"
+      ],
+      [
+        "The Great Gatsby",
+        "Pride and Prejudice",
+        "1984"
+      ],
+      [
+        "comedy",
+        "action",
+        "horror"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 135 has Pride and Prejudice.",
+      "The person with 135 has Harvard University.",
+      "The person with 130 has The Great Gatsby.",
+      "The person with 135 has horror.",
+      "The person with Pride and Prejudice has Harvard University.",
+      "The person who has Pride and Prejudice has Pride and Prejudice.",
+      "The person with horror does not have 1984.",
+      "The person with action does not have Harvard University.",
+      "The person with Bernard lives in the position 140 house.",
+      "The person with Albert lives in the position 135 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person with 135 has Pride and Prejudice."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "University",
+        "attr2": "Harvard University",
+        "text": "The person with 135 has Harvard University."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FavoriteBook",
+        "attr2": "The Great Gatsby",
+        "text": "The person with 130 has The Great Gatsby."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "movie type",
+        "attr2": "horror",
+        "text": "The person with 135 has horror."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteBook",
+        "attr1": "Pride and Prejudice",
+        "dim2": "University",
+        "attr2": "Harvard University",
+        "text": "The person with Pride and Prejudice has Harvard University."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteBook",
+        "attr1": "Pride and Prejudice",
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person who has Pride and Prejudice has Pride and Prejudice."
+      },
+      {
+        "type": "negative",
+        "dim1": "movie type",
+        "attr1": "horror",
+        "dim2": "FavoriteBook",
+        "attr2": "1984",
+        "text": "The person with horror does not have 1984."
+      },
+      {
+        "type": "negative",
+        "dim1": "movie type",
+        "attr1": "action",
+        "dim2": "University",
+        "attr2": "Harvard University",
+        "text": "The person with action does not have Harvard University."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the position 140 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the position 135 house."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "The Great Gatsby",
+        "Pride and Prejudice",
+        "1984"
+      ],
+      [
+        "MIT",
+        "Harvard University",
+        "Stanford University"
+      ],
+      [
+        "The Great Gatsby",
+        "Pride and Prejudice",
+        "1984"
+      ],
+      [
+        "action",
+        "horror",
+        "comedy"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4007,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "TVShow",
+      "Brand",
+      "Language",
+      "University"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Stranger Things",
+        "Game of Thrones",
+        "Breaking Bad",
+        "Friends"
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Nike",
+        "Adidas"
+      ],
+      [
+        "French",
+        "Spanish",
+        "Mandarin",
+        "English"
+      ],
+      [
+        "University of Oxford",
+        "Harvard University",
+        "MIT",
+        "Stanford University"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 3 has Game of Thrones.",
+      "The person with 4 owns Apple.",
+      "The person with 2 has English.",
+      "The person with 4 has MIT.",
+      "The person with Friends uses Nike.",
+      "The person who has English has Friends.",
+      "The person with Friends has Stanford University.",
+      "The person with Apple has Spanish.",
+      "The person with 3 does not prefer Adidas.",
+      "The person with 2 does not have MIT.",
+      "The person with Albert lives directly to the left of the person with Charles.",
+      "The person with Albert lives to the left of the person with David."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "TVShow",
+        "attr2": "Game of Thrones",
+        "text": "The person with 3 has Game of Thrones."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "Brand",
+        "attr2": "Apple",
+        "text": "The person with 4 owns Apple."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with 2 has English."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "University",
+        "attr2": "MIT",
+        "text": "The person with 4 has MIT."
+      },
+      {
+        "type": "positive",
+        "dim1": "TVShow",
+        "attr1": "Friends",
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with Friends uses Nike."
+      },
+      {
+        "type": "positive",
+        "dim1": "TVShow",
+        "attr1": "Friends",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person who has English has Friends."
+      },
+      {
+        "type": "positive",
+        "dim1": "TVShow",
+        "attr1": "Friends",
+        "dim2": "University",
+        "attr2": "Stanford University",
+        "text": "The person with Friends has Stanford University."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Apple",
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with Apple has Spanish."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Brand",
+        "attr2": "Adidas",
+        "text": "The person with 3 does not prefer Adidas."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "University",
+        "attr2": "MIT",
+        "text": "The person with 2 does not have MIT."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives directly to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "David",
+        "text": "The person with Albert lives to the left of the person with David."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Breaking Bad",
+        "Friends",
+        "Game of Thrones",
+        "Stranger Things"
+      ],
+      [
+        "Adidas",
+        "Nike",
+        "Samsung",
+        "Apple"
+      ],
+      [
+        "French",
+        "English",
+        "Mandarin",
+        "Spanish"
+      ],
+      [
+        "University of Oxford",
+        "Stanford University",
+        "Harvard University",
+        "MIT"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4008,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "Brand",
+      "AccessoryTypes"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Apple",
+        "Adidas",
+        "Nike"
+      ],
+      [
+        "Sunglasses",
+        "Watch",
+        "Bracelet"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person with 130 uses Nike.",
+      "The person with 140 wears Watch.",
+      "The person who wears Sunglasses owns Adidas.",
+      "The person with 140 does not wear Bracelet.",
+      "The person with Albert lives somewhere to the left of the person with Bernard.",
+      "The person with Charles lives in the position 130 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with 130 uses Nike."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "AccessoryTypes",
+        "attr2": "Watch",
+        "text": "The person with 140 wears Watch."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Adidas",
+        "dim2": "AccessoryTypes",
+        "attr2": "Sunglasses",
+        "text": "The person who wears Sunglasses owns Adidas."
+      },
+      {
+        "type": "negative",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "AccessoryTypes",
+        "attr2": "Bracelet",
+        "text": "The person with 140 does not wear Bracelet."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives in the position 130 house."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Nike",
+        "Adidas",
+        "Apple"
+      ],
+      [
+        "Bracelet",
+        "Sunglasses",
+        "Watch"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4009,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "YouTubeChannel",
+      "MusicalInstrument"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "MrBeast",
+        "T-Series",
+        "PewDiePie"
+      ],
+      [
+        "Guitar",
+        "Violin",
+        "Piano"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person with 2 has T-Series.",
+      "The person with 3 owns Piano.",
+      "The person who owns Guitar has MrBeast.",
+      "The person with 1 does not play Violin.",
+      "The person with Charles lives in the third house.",
+      "The person with Bernard lives directly to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "YouTubeChannel",
+        "attr2": "T-Series",
+        "text": "The person with 2 has T-Series."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "MusicalInstrument",
+        "attr2": "Piano",
+        "text": "The person with 3 owns Piano."
+      },
+      {
+        "type": "positive",
+        "dim1": "YouTubeChannel",
+        "attr1": "MrBeast",
+        "dim2": "MusicalInstrument",
+        "attr2": "Guitar",
+        "text": "The person who owns Guitar has MrBeast."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "MusicalInstrument",
+        "attr2": "Violin",
+        "text": "The person with 1 does not play Violin."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Charles lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives directly to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "MrBeast",
+        "T-Series",
+        "PewDiePie"
+      ],
+      [
+        "Guitar",
+        "Violin",
+        "Piano"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4010,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Age",
+      "FavoriteLuxuryBrand",
+      "FavoriteCelebrity"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Chanel",
+        "Gucci",
+        "Louis Vuitton"
+      ],
+      [
+        "Beyonc茅",
+        "Leonardo DiCaprio",
+        "Tom Hanks"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person who prefers Louis Vuitton has 22.",
+      "The person who has 21 has Beyonc茅.",
+      "The person with Louis Vuitton has Leonardo DiCaprio.",
+      "The person with 22 does not use Chanel.",
+      "The person with Chanel does not have 20.",
+      "The person with Bernard lives directly to the left of the person with Albert.",
+      "The person with Charles lives in the position 20 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Louis Vuitton",
+        "text": "The person who prefers Louis Vuitton has 22."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Beyonc茅",
+        "text": "The person who has 21 has Beyonc茅."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with Louis Vuitton has Leonardo DiCaprio."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Chanel",
+        "text": "The person with 22 does not use Chanel."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Chanel",
+        "dim2": "Age",
+        "attr2": 20,
+        "text": "The person with Chanel does not have 20."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives directly to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives in the position 20 house."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Gucci",
+        "Chanel",
+        "Louis Vuitton"
+      ],
+      [
+        "Tom Hanks",
+        "Beyonc茅",
+        "Leonardo DiCaprio"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4011,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "Phone Brand",
+      "FavoriteActor",
+      "Phone Brand"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Samsung",
+        "Apple",
+        "Huawei"
+      ],
+      [
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Robert De Niro"
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Huawei"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 135 owns Samsung.",
+      "The person with 140 admires Robert De Niro.",
+      "The person with 140 owns Huawei.",
+      "The person who uses Samsung admires Leonardo DiCaprio.",
+      "The person who uses Huawei uses Huawei.",
+      "The person who prefers Huawei likes Robert De Niro.",
+      "The person with Tom Hanks does not own Samsung.",
+      "The person with Leonardo DiCaprio does not prefer Apple.",
+      "The person with Apple does not admire Leonardo DiCaprio.",
+      "The person with Albert lives in the position 140 house.",
+      "The person with Charles lives somewhere to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "Phone Brand",
+        "attr2": "Samsung",
+        "text": "The person with 135 owns Samsung."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "FavoriteActor",
+        "attr2": "Robert De Niro",
+        "text": "The person with 140 admires Robert De Niro."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Phone Brand",
+        "attr2": "Huawei",
+        "text": "The person with 140 owns Huawei."
+      },
+      {
+        "type": "positive",
+        "dim1": "Phone Brand",
+        "attr1": "Samsung",
+        "dim2": "FavoriteActor",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person who uses Samsung admires Leonardo DiCaprio."
+      },
+      {
+        "type": "positive",
+        "dim1": "Phone Brand",
+        "attr1": "Huawei",
+        "dim2": "Phone Brand",
+        "attr2": "Huawei",
+        "text": "The person who uses Huawei uses Huawei."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteActor",
+        "attr1": "Robert De Niro",
+        "dim2": "Phone Brand",
+        "attr2": "Huawei",
+        "text": "The person who prefers Huawei likes Robert De Niro."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteActor",
+        "attr1": "Tom Hanks",
+        "dim2": "Phone Brand",
+        "attr2": "Samsung",
+        "text": "The person with Tom Hanks does not own Samsung."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteActor",
+        "attr1": "Leonardo DiCaprio",
+        "dim2": "Phone Brand",
+        "attr2": "Apple",
+        "text": "The person with Leonardo DiCaprio does not prefer Apple."
+      },
+      {
+        "type": "negative",
+        "dim1": "Phone Brand",
+        "attr1": "Apple",
+        "dim2": "FavoriteActor",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with Apple does not admire Leonardo DiCaprio."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the position 140 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives somewhere to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Huawei"
+      ],
+      [
+        "Tom Hanks",
+        "Leonardo DiCaprio",
+        "Robert De Niro"
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Huawei"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4012,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "AccessoryTypes",
+      "MusicGenre",
+      "Profession",
+      "TVShow"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Watch",
+        "Bracelet",
+        "Sunglasses"
+      ],
+      [
+        "Jazz",
+        "Rock",
+        "Pop"
+      ],
+      [
+        "Engineer",
+        "Doctor",
+        "Teacher"
+      ],
+      [
+        "Friends",
+        "Game of Thrones",
+        "Breaking Bad"
+      ]
+    ],
+    "num_clues": 9,
+    "clues": [
+      "The person with 2 has Sunglasses.",
+      "The person with 1 enjoys Rock.",
+      "The person with 3 has Doctor.",
+      "The person with 2 has Friends.",
+      "The person with Watch enjoys Rock.",
+      "The person with Sunglasses has Teacher.",
+      "The person with Sunglasses does not have 1.",
+      "The person with Albert lives in the third house.",
+      "The person with Charles lives directly to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "AccessoryTypes",
+        "attr2": "Sunglasses",
+        "text": "The person with 2 has Sunglasses."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "MusicGenre",
+        "attr2": "Rock",
+        "text": "The person with 1 enjoys Rock."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Profession",
+        "attr2": "Doctor",
+        "text": "The person with 3 has Doctor."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "TVShow",
+        "attr2": "Friends",
+        "text": "The person with 2 has Friends."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Watch",
+        "dim2": "MusicGenre",
+        "attr2": "Rock",
+        "text": "The person with Watch enjoys Rock."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Sunglasses",
+        "dim2": "Profession",
+        "attr2": "Teacher",
+        "text": "The person with Sunglasses has Teacher."
+      },
+      {
+        "type": "negative",
+        "dim1": "AccessoryTypes",
+        "attr1": "Sunglasses",
+        "dim2": "LinePosition",
+        "attr2": 1,
+        "text": "The person with Sunglasses does not have 1."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives directly to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Watch",
+        "Sunglasses",
+        "Bracelet"
+      ],
+      [
+        "Rock",
+        "Pop",
+        "Jazz"
+      ],
+      [
+        "Engineer",
+        "Teacher",
+        "Doctor"
+      ],
+      [
+        "Game of Thrones",
+        "Friends",
+        "Breaking Bad"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4013,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteLuxuryBrand",
+      "SocialMediaPlatform",
+      "College"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Gucci",
+        "Chanel",
+        "Louis Vuitton"
+      ],
+      [
+        "Facebook",
+        "Instagram",
+        "Twitter"
+      ],
+      [
+        "Stanford University",
+        "Harvard University",
+        "MIT"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 130 uses Gucci.",
+      "The person with 135 uses Facebook.",
+      "The person with 130 has Stanford University.",
+      "The person who uses Instagram prefers Louis Vuitton.",
+      "The person who has MIT prefers Louis Vuitton.",
+      "The person with Twitter has Stanford University.",
+      "The person with MIT does not use Chanel.",
+      "The person with Gucci does not use Instagram.",
+      "The person with Charles lives somewhere to the left of the person with Bernard.",
+      "The person with Bernard lives somewhere to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Gucci",
+        "text": "The person with 130 uses Gucci."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "SocialMediaPlatform",
+        "attr2": "Facebook",
+        "text": "The person with 135 uses Facebook."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "College",
+        "attr2": "Stanford University",
+        "text": "The person with 130 has Stanford University."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "SocialMediaPlatform",
+        "attr2": "Instagram",
+        "text": "The person who uses Instagram prefers Louis Vuitton."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person who has MIT prefers Louis Vuitton."
+      },
+      {
+        "type": "positive",
+        "dim1": "SocialMediaPlatform",
+        "attr1": "Twitter",
+        "dim2": "College",
+        "attr2": "Stanford University",
+        "text": "The person with Twitter has Stanford University."
+      },
+      {
+        "type": "negative",
+        "dim1": "College",
+        "attr1": "MIT",
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Chanel",
+        "text": "The person with MIT does not use Chanel."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Gucci",
+        "dim2": "SocialMediaPlatform",
+        "attr2": "Instagram",
+        "text": "The person with Gucci does not use Instagram."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives somewhere to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Gucci",
+        "Chanel",
+        "Louis Vuitton"
+      ],
+      [
+        "Twitter",
+        "Facebook",
+        "Instagram"
+      ],
+      [
+        "Stanford University",
+        "Harvard University",
+        "MIT"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4014,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "ShoeTypes",
+      "fruit"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Sandals",
+        "Boots",
+        "Sneakers"
+      ],
+      [
+        "apple",
+        "cranberry",
+        "grapefruit"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person with 130 has Sneakers.",
+      "The person with 140 has grapefruit.",
+      "The person with Sandals has cranberry.",
+      "The person with grapefruit does not i 135.",
+      "The person with Sneakers does not have grapefruit.",
+      "The person with Albert lives somewhere to the left of the person with Bernard.",
+      "The person with Charles lives somewhere to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person with 130 has Sneakers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "fruit",
+        "attr2": "grapefruit",
+        "text": "The person with 140 has grapefruit."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Sandals",
+        "dim2": "fruit",
+        "attr2": "cranberry",
+        "text": "The person with Sandals has cranberry."
+      },
+      {
+        "type": "negative",
+        "dim1": "fruit",
+        "attr1": "grapefruit",
+        "dim2": "Height",
+        "attr2": 135,
+        "text": "The person with grapefruit does not i 135."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "fruit",
+        "attr2": "grapefruit",
+        "text": "The person with Sneakers does not have grapefruit."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Sneakers",
+        "Sandals",
+        "Boots"
+      ],
+      [
+        "apple",
+        "cranberry",
+        "grapefruit"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4015,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "Pet",
+      "Music",
+      "Drink"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Cat",
+        "Fish",
+        "Bird",
+        "Dog"
+      ],
+      [
+        "Pop",
+        "Rap",
+        "Hip Hop",
+        "Rock"
+      ],
+      [
+        "Tea",
+        "Milk",
+        "Coffee",
+        "Juice"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 2 owns Dog.",
+      "The person with 3 listens to Hip Hop.",
+      "The person with 1 prefers Coffee.",
+      "The person who keeps Cat listens to Rap.",
+      "The Cat enjoys Coffee.",
+      "The person with Rap prefers Coffee.",
+      "The person with Milk does not listens to Hip Hop.",
+      "The person with 4 does not prefer Milk.",
+      "The person with Bernard lives in the third house.",
+      "The person with Charles lives immediately to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Pet",
+        "attr2": "Dog",
+        "text": "The person with 2 owns Dog."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Music",
+        "attr2": "Hip Hop",
+        "text": "The person with 3 listens to Hip Hop."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "Drink",
+        "attr2": "Coffee",
+        "text": "The person with 1 prefers Coffee."
+      },
+      {
+        "type": "positive",
+        "dim1": "Pet",
+        "attr1": "Cat",
+        "dim2": "Music",
+        "attr2": "Rap",
+        "text": "The person who keeps Cat listens to Rap."
+      },
+      {
+        "type": "positive",
+        "dim1": "Pet",
+        "attr1": "Cat",
+        "dim2": "Drink",
+        "attr2": "Coffee",
+        "text": "The Cat enjoys Coffee."
+      },
+      {
+        "type": "positive",
+        "dim1": "Music",
+        "attr1": "Rap",
+        "dim2": "Drink",
+        "attr2": "Coffee",
+        "text": "The person with Rap prefers Coffee."
+      },
+      {
+        "type": "negative",
+        "dim1": "Drink",
+        "attr1": "Milk",
+        "dim2": "Music",
+        "attr2": "Hip Hop",
+        "text": "The person with Milk does not listens to Hip Hop."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "Drink",
+        "attr2": "Milk",
+        "text": "The person with 4 does not prefer Milk."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "David",
+        "text": "The person with Bernard lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives immediately to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "Bernard",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Cat",
+        "Dog",
+        "Bird",
+        "Fish"
+      ],
+      [
+        "Rap",
+        "Pop",
+        "Hip Hop",
+        "Rock"
+      ],
+      [
+        "Coffee",
+        "Milk",
+        "Tea",
+        "Juice"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4016,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "Nationality",
+      "Nationality"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Ukrainian",
+        "Spaniard",
+        "Englishman"
+      ],
+      [
+        "Spaniard",
+        "Ukrainian",
+        "Englishman"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 3 lives in Spaniard.",
+      "The person who has 1 resides in Spaniard.",
+      "The person who lives in Spaniard resides in Englishman.",
+      "The person with 1 does not inhabit Ukrainian.",
+      "The Ukrainian does not have 1.",
+      "The person with 3 does not lives in Englishman.",
+      "The person with Charles lives in the third house.",
+      "The person with Bernard lives immediately to the left of the person with Charles."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "Nationality",
+        "attr2": "Spaniard",
+        "text": "The person with 3 lives in Spaniard."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "Nationality",
+        "attr2": "Spaniard",
+        "text": "The person who has 1 resides in Spaniard."
+      },
+      {
+        "type": "positive",
+        "dim1": "Nationality",
+        "attr1": "Englishman",
+        "dim2": "Nationality",
+        "attr2": "Spaniard",
+        "text": "The person who lives in Spaniard resides in Englishman."
+      },
+      {
+        "type": "negative",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "Nationality",
+        "attr2": "Ukrainian",
+        "text": "The person with 1 does not inhabit Ukrainian."
+      },
+      {
+        "type": "negative",
+        "dim1": "Nationality",
+        "attr1": "Ukrainian",
+        "dim2": "House Num",
+        "attr2": 1,
+        "text": "The Ukrainian does not have 1."
+      },
+      {
+        "type": "negative",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "Nationality",
+        "attr2": "Englishman",
+        "text": "The person with 3 does not lives in Englishman."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Charles lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives immediately to the left of the person with Charles."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Englishman",
+        "Ukrainian",
+        "Spaniard"
+      ],
+      [
+        "Spaniard",
+        "Ukrainian",
+        "Englishman"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4017,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "Profession",
+      "Nationality",
+      "Brand"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Engineer",
+        "Teacher",
+        "Doctor"
+      ],
+      [
+        "Ukrainian",
+        "Spaniard",
+        "Englishman"
+      ],
+      [
+        "Adidas",
+        "Apple",
+        "Nike"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 3 has Doctor.",
+      "The person with 3 resides in Englishman.",
+      "The person with 2 owns Nike.",
+      "The person with Engineer lives in Ukrainian.",
+      "The person who has Engineer owns Nike.",
+      "The Englishman owns Apple.",
+      "The person with Doctor does not have 2.",
+      "The person with Apple does not have 2.",
+      "The person with Albert lives immediately to the left of the person with Charles.",
+      "The person with Bernard lives to the left of the person with Charles."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Profession",
+        "attr2": "Doctor",
+        "text": "The person with 3 has Doctor."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Nationality",
+        "attr2": "Englishman",
+        "text": "The person with 3 resides in Englishman."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with 2 owns Nike."
+      },
+      {
+        "type": "positive",
+        "dim1": "Profession",
+        "attr1": "Engineer",
+        "dim2": "Nationality",
+        "attr2": "Ukrainian",
+        "text": "The person with Engineer lives in Ukrainian."
+      },
+      {
+        "type": "positive",
+        "dim1": "Profession",
+        "attr1": "Engineer",
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person who has Engineer owns Nike."
+      },
+      {
+        "type": "positive",
+        "dim1": "Nationality",
+        "attr1": "Englishman",
+        "dim2": "Brand",
+        "attr2": "Apple",
+        "text": "The Englishman owns Apple."
+      },
+      {
+        "type": "negative",
+        "dim1": "Profession",
+        "attr1": "Doctor",
+        "dim2": "LinePosition",
+        "attr2": 2,
+        "text": "The person with Doctor does not have 2."
+      },
+      {
+        "type": "negative",
+        "dim1": "Brand",
+        "attr1": "Apple",
+        "dim2": "LinePosition",
+        "attr2": 2,
+        "text": "The person with Apple does not have 2."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives immediately to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives to the left of the person with Charles."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Teacher",
+        "Engineer",
+        "Doctor"
+      ],
+      [
+        "Spaniard",
+        "Ukrainian",
+        "Englishman"
+      ],
+      [
+        "Adidas",
+        "Nike",
+        "Apple"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4018,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "Holiday",
+      "Language",
+      "BeverageBrand",
+      "FavoriteCelebrity"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Christmas",
+        "New Year's Eve",
+        "Thanksgiving"
+      ],
+      [
+        "Spanish",
+        "English",
+        "Mandarin"
+      ],
+      [
+        "Starbucks",
+        "Coca-Cola",
+        "Pepsi"
+      ],
+      [
+        "Leonardo DiCaprio",
+        "Beyonc茅",
+        "Tom Hanks"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 3 has Christmas.",
+      "The person with 2 has Spanish.",
+      "The person with 3 drinks Coca-Cola.",
+      "The person with 3 has Beyonc茅.",
+      "The person with Thanksgiving has Spanish.",
+      "The person who prefers Starbucks has New Year's Eve.",
+      "The person with Thanksgiving does not prefer Starbucks.",
+      "The person with Spanish does not have New Year's Eve.",
+      "The person with 2 does not have Mandarin.",
+      "The person with Albert lives to the left of the person with Charles.",
+      "The person with Albert lives to the left of the person with Charles."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "Holiday",
+        "attr2": "Christmas",
+        "text": "The person with 3 has Christmas."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with 2 has Spanish."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "BeverageBrand",
+        "attr2": "Coca-Cola",
+        "text": "The person with 3 drinks Coca-Cola."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Beyonc茅",
+        "text": "The person with 3 has Beyonc茅."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with Thanksgiving has Spanish."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "New Year's Eve",
+        "dim2": "BeverageBrand",
+        "attr2": "Starbucks",
+        "text": "The person who prefers Starbucks has New Year's Eve."
+      },
+      {
+        "type": "negative",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "BeverageBrand",
+        "attr2": "Starbucks",
+        "text": "The person with Thanksgiving does not prefer Starbucks."
+      },
+      {
+        "type": "negative",
+        "dim1": "Language",
+        "attr1": "Spanish",
+        "dim2": "Holiday",
+        "attr2": "New Year's Eve",
+        "text": "The person with Spanish does not have New Year's Eve."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Language",
+        "attr2": "Mandarin",
+        "text": "The person with 2 does not have Mandarin."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives to the left of the person with Charles."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "New Year's Eve",
+        "Thanksgiving",
+        "Christmas"
+      ],
+      [
+        "Mandarin",
+        "Spanish",
+        "English"
+      ],
+      [
+        "Starbucks",
+        "Pepsi",
+        "Coca-Cola"
+      ],
+      [
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Beyonc茅"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4019,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "Brand",
+      "ShoeTypes",
+      "FavoriteActor"
+    ],
+    "entities": [
+      [
+        "David",
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Samsung",
+        "Apple",
+        "Nike",
+        "Adidas"
+      ],
+      [
+        "Sandals",
+        "Slippers",
+        "Boots",
+        "Sneakers"
+      ],
+      [
+        "Robert De Niro",
+        "Tom Hanks",
+        "Leonardo DiCaprio",
+        "Morgan Freeman"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 1 prefers Apple.",
+      "The person with 3 has Boots.",
+      "The person with 2 admires Leonardo DiCaprio.",
+      "The person who owns Nike has Sneakers.",
+      "The person with Apple admires Morgan Freeman.",
+      "The person with Sneakers likes Robert De Niro.",
+      "The person with Slippers does not own Nike.",
+      "The person with Sneakers does not have 1.",
+      "The person with Slippers does not admire Tom Hanks.",
+      "The person with David lives to the left of the person with Bernard.",
+      "The person with Bernard lives immediately to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "Brand",
+        "attr2": "Apple",
+        "text": "The person with 1 prefers Apple."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "ShoeTypes",
+        "attr2": "Boots",
+        "text": "The person with 3 has Boots."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "FavoriteActor",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with 2 admires Leonardo DiCaprio."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Nike",
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person who owns Nike has Sneakers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Apple",
+        "dim2": "FavoriteActor",
+        "attr2": "Morgan Freeman",
+        "text": "The person with Apple admires Morgan Freeman."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "FavoriteActor",
+        "attr2": "Robert De Niro",
+        "text": "The person with Sneakers likes Robert De Niro."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Slippers",
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with Slippers does not own Nike."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "LinePosition",
+        "attr2": 1,
+        "text": "The person with Sneakers does not have 1."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Slippers",
+        "dim2": "FavoriteActor",
+        "attr2": "Tom Hanks",
+        "text": "The person with Slippers does not admire Tom Hanks."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives immediately to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "David",
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Adidas",
+        "Nike"
+      ],
+      [
+        "Slippers",
+        "Sandals",
+        "Boots",
+        "Sneakers"
+      ],
+      [
+        "Morgan Freeman",
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Robert De Niro"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4020,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Favorite Superhero",
+      "Nationality",
+      "FavoriteAuthor",
+      "Travel Destination"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Batman",
+        "Spider-Man",
+        "Superman"
+      ],
+      [
+        "Ukrainian",
+        "Englishman",
+        "Spaniard"
+      ],
+      [
+        "J.K. Rowling",
+        "George Orwell",
+        "William Shakespeare"
+      ],
+      [
+        "New York",
+        "London",
+        "Paris"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 21 has Superman.",
+      "The person with 20 inhabits Ukrainian.",
+      "The person with 22 has William Shakespeare.",
+      "The person who has 21 has London.",
+      "The person who lives in Englishman has Spider-Man.",
+      "The person who has J.K. Rowling has Superman.",
+      "The person with New York does not have Superman.",
+      "The person with 21 does not have Batman.",
+      "The person with Charles lives directly to the left of the person with Bernard.",
+      "The person with Albert lives in the position 20 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Favorite Superhero",
+        "attr2": "Superman",
+        "text": "The person with 21 has Superman."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Nationality",
+        "attr2": "Ukrainian",
+        "text": "The person with 20 inhabits Ukrainian."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "FavoriteAuthor",
+        "attr2": "William Shakespeare",
+        "text": "The person with 22 has William Shakespeare."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Travel Destination",
+        "attr2": "London",
+        "text": "The person who has 21 has London."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Spider-Man",
+        "dim2": "Nationality",
+        "attr2": "Englishman",
+        "text": "The person who lives in Englishman has Spider-Man."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Superman",
+        "dim2": "FavoriteAuthor",
+        "attr2": "J.K. Rowling",
+        "text": "The person who has J.K. Rowling has Superman."
+      },
+      {
+        "type": "negative",
+        "dim1": "Travel Destination",
+        "attr1": "New York",
+        "dim2": "Favorite Superhero",
+        "attr2": "Superman",
+        "text": "The person with New York does not have Superman."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Favorite Superhero",
+        "attr2": "Batman",
+        "text": "The person with 21 does not have Batman."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives directly to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives in the position 20 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Batman",
+        "Superman",
+        "Spider-Man"
+      ],
+      [
+        "Ukrainian",
+        "Spaniard",
+        "Englishman"
+      ],
+      [
+        "George Orwell",
+        "J.K. Rowling",
+        "William Shakespeare"
+      ],
+      [
+        "Paris",
+        "London",
+        "New York"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4021,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "fruit",
+      "AccessoryTypes",
+      "ClothingBrand"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "grapefruit",
+        "apple",
+        "cranberry"
+      ],
+      [
+        "Bracelet",
+        "Watch",
+        "Sunglasses"
+      ],
+      [
+        "Nike",
+        "Zara",
+        "Adidas"
+      ]
+    ],
+    "num_clues": 9,
+    "clues": [
+      "The person who has 3 has apple.",
+      "The person with 1 has Sunglasses.",
+      "The person who owns Zara has 1.",
+      "The person with grapefruit wears Sunglasses.",
+      "The person who uses Zara has grapefruit.",
+      "The person with Watch uses Adidas.",
+      "The person with Sunglasses does not have cranberry.",
+      "The person with Albert lives in the third house.",
+      "The person with Charles lives immediately to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "fruit",
+        "attr2": "apple",
+        "text": "The person who has 3 has apple."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "AccessoryTypes",
+        "attr2": "Sunglasses",
+        "text": "The person with 1 has Sunglasses."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "ClothingBrand",
+        "attr2": "Zara",
+        "text": "The person who owns Zara has 1."
+      },
+      {
+        "type": "positive",
+        "dim1": "fruit",
+        "attr1": "grapefruit",
+        "dim2": "AccessoryTypes",
+        "attr2": "Sunglasses",
+        "text": "The person with grapefruit wears Sunglasses."
+      },
+      {
+        "type": "positive",
+        "dim1": "fruit",
+        "attr1": "grapefruit",
+        "dim2": "ClothingBrand",
+        "attr2": "Zara",
+        "text": "The person who uses Zara has grapefruit."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Watch",
+        "dim2": "ClothingBrand",
+        "attr2": "Adidas",
+        "text": "The person with Watch uses Adidas."
+      },
+      {
+        "type": "negative",
+        "dim1": "AccessoryTypes",
+        "attr1": "Sunglasses",
+        "dim2": "fruit",
+        "attr2": "cranberry",
+        "text": "The person with Sunglasses does not have cranberry."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives immediately to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "grapefruit",
+        "cranberry",
+        "apple"
+      ],
+      [
+        "Sunglasses",
+        "Watch",
+        "Bracelet"
+      ],
+      [
+        "Zara",
+        "Adidas",
+        "Nike"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4022,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "AccessoryTypes",
+      "YouTubeChannel",
+      "Language"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Sunglasses",
+        "Necklace",
+        "Bracelet",
+        "Watch"
+      ],
+      [
+        "MrBeast",
+        "PewDiePie",
+        "Cocomelon",
+        "T-Series"
+      ],
+      [
+        "Mandarin",
+        "English",
+        "French",
+        "Spanish"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 130 has Watch.",
+      "The person with 130 has MrBeast.",
+      "The person with 140 has Spanish.",
+      "The person with Sunglasses has PewDiePie.",
+      "The person with Necklace has Mandarin.",
+      "The person with PewDiePie has Spanish.",
+      "The person with 135 does not have PewDiePie.",
+      "The person with Cocomelon does not have English.",
+      "The person with Charles lives somewhere to the left of the person with David.",
+      "The person with David lives in the position 145 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "AccessoryTypes",
+        "attr2": "Watch",
+        "text": "The person with 130 has Watch."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "YouTubeChannel",
+        "attr2": "MrBeast",
+        "text": "The person with 130 has MrBeast."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with 140 has Spanish."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Sunglasses",
+        "dim2": "YouTubeChannel",
+        "attr2": "PewDiePie",
+        "text": "The person with Sunglasses has PewDiePie."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Necklace",
+        "dim2": "Language",
+        "attr2": "Mandarin",
+        "text": "The person with Necklace has Mandarin."
+      },
+      {
+        "type": "positive",
+        "dim1": "YouTubeChannel",
+        "attr1": "PewDiePie",
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with PewDiePie has Spanish."
+      },
+      {
+        "type": "negative",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "YouTubeChannel",
+        "attr2": "PewDiePie",
+        "text": "The person with 135 does not have PewDiePie."
+      },
+      {
+        "type": "negative",
+        "dim1": "YouTubeChannel",
+        "attr1": "Cocomelon",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with Cocomelon does not have English."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives somewhere to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "David",
+        "text": "The person with David lives in the position 145 house."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Watch",
+        "Necklace",
+        "Sunglasses",
+        "Bracelet"
+      ],
+      [
+        "MrBeast",
+        "T-Series",
+        "PewDiePie",
+        "Cocomelon"
+      ],
+      [
+        "English",
+        "Mandarin",
+        "Spanish",
+        "French"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4023,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "FavoriteAuthor",
+      "Holiday",
+      "College"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "J.K. Rowling",
+        "George Orwell",
+        "William Shakespeare"
+      ],
+      [
+        "Thanksgiving",
+        "New Year's Eve",
+        "Christmas"
+      ],
+      [
+        "Harvard University",
+        "Stanford University",
+        "MIT"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 1 has J.K. Rowling.",
+      "The person with 1 has Thanksgiving.",
+      "The person with 3 has MIT.",
+      "The person with George Orwell has Christmas.",
+      "The person with William Shakespeare has Stanford University.",
+      "The person with Christmas has MIT.",
+      "The person with William Shakespeare does not have Thanksgiving.",
+      "The person with William Shakespeare does not have MIT.",
+      "The person with 1 does not have William Shakespeare.",
+      "The person with Bernard lives to the left of the person with Charles.",
+      "The person with Albert lives immediately to the left of the person with Charles."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "FavoriteAuthor",
+        "attr2": "J.K. Rowling",
+        "text": "The person with 1 has J.K. Rowling."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with 1 has Thanksgiving."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 3,
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with 3 has MIT."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteAuthor",
+        "attr1": "George Orwell",
+        "dim2": "Holiday",
+        "attr2": "Christmas",
+        "text": "The person with George Orwell has Christmas."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteAuthor",
+        "attr1": "William Shakespeare",
+        "dim2": "College",
+        "attr2": "Stanford University",
+        "text": "The person with William Shakespeare has Stanford University."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "Christmas",
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with Christmas has MIT."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteAuthor",
+        "attr1": "William Shakespeare",
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with William Shakespeare does not have Thanksgiving."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteAuthor",
+        "attr1": "William Shakespeare",
+        "dim2": "College",
+        "attr2": "MIT",
+        "text": "The person with William Shakespeare does not have MIT."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "FavoriteAuthor",
+        "attr2": "William Shakespeare",
+        "text": "The person with 1 does not have William Shakespeare."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives immediately to the left of the person with Charles."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "J.K. Rowling",
+        "William Shakespeare",
+        "George Orwell"
+      ],
+      [
+        "Thanksgiving",
+        "New Year's Eve",
+        "Christmas"
+      ],
+      [
+        "Harvard University",
+        "Stanford University",
+        "MIT"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4024,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Brand",
+      "AccessoryTypes",
+      "YouTubeChannel",
+      "Food"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "David",
+        "Charles",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Apple",
+        "Samsung",
+        "Nike",
+        "Adidas"
+      ],
+      [
+        "Bracelet",
+        "Watch",
+        "Sunglasses",
+        "Necklace"
+      ],
+      [
+        "T-Series",
+        "PewDiePie",
+        "Cocomelon",
+        "MrBeast"
+      ],
+      [
+        "Pasta",
+        "Pizza",
+        "Hamburger",
+        "Sushi"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 20 owns Samsung.",
+      "The person with 21 wears Necklace.",
+      "The person who has Cocomelon has 22.",
+      "The person with 23 prefers Pasta.",
+      "The person with Samsung wears Bracelet.",
+      "The person who has PewDiePie uses Nike.",
+      "The person with Nike prefers Sushi.",
+      "The person with Watch has MrBeast.",
+      "The person with Nike does not wear Watch.",
+      "The person with 22 does not prefer Nike.",
+      "The person with David lives immediately to the left of the person with Charles.",
+      "The person with Charles lives directly to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Brand",
+        "attr2": "Samsung",
+        "text": "The person with 20 owns Samsung."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "AccessoryTypes",
+        "attr2": "Necklace",
+        "text": "The person with 21 wears Necklace."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "YouTubeChannel",
+        "attr2": "Cocomelon",
+        "text": "The person who has Cocomelon has 22."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "Food",
+        "attr2": "Pasta",
+        "text": "The person with 23 prefers Pasta."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Samsung",
+        "dim2": "AccessoryTypes",
+        "attr2": "Bracelet",
+        "text": "The person with Samsung wears Bracelet."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Nike",
+        "dim2": "YouTubeChannel",
+        "attr2": "PewDiePie",
+        "text": "The person who has PewDiePie uses Nike."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Nike",
+        "dim2": "Food",
+        "attr2": "Sushi",
+        "text": "The person with Nike prefers Sushi."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Watch",
+        "dim2": "YouTubeChannel",
+        "attr2": "MrBeast",
+        "text": "The person with Watch has MrBeast."
+      },
+      {
+        "type": "negative",
+        "dim1": "Brand",
+        "attr1": "Nike",
+        "dim2": "AccessoryTypes",
+        "attr2": "Watch",
+        "text": "The person with Nike does not wear Watch."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with 22 does not prefer Nike."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Charles",
+        "text": "The person with David lives immediately to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives directly to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "David",
+        "Charles",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Samsung",
+        "Nike",
+        "Apple",
+        "Adidas"
+      ],
+      [
+        "Bracelet",
+        "Necklace",
+        "Sunglasses",
+        "Watch"
+      ],
+      [
+        "T-Series",
+        "PewDiePie",
+        "Cocomelon",
+        "MrBeast"
+      ],
+      [
+        "Hamburger",
+        "Sushi",
+        "Pizza",
+        "Pasta"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4025,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteActor",
+      "Favorite Subject",
+      "Pet"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Tom Hanks",
+        "Robert De Niro",
+        "Morgan Freeman",
+        "Leonardo DiCaprio"
+      ],
+      [
+        "Mathematics",
+        "History",
+        "English",
+        "Biology"
+      ],
+      [
+        "Fish",
+        "Dog",
+        "Bird",
+        "Cat"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 135 likes Leonardo DiCaprio.",
+      "The person with 130 has Biology.",
+      "The person with 145 keeps Fish.",
+      "The person with Leonardo DiCaprio has History.",
+      "The person with Robert De Niro has Bird.",
+      "The person with Biology owns Bird.",
+      "The person with 130 does not have Mathematics.",
+      "The Fish does not has a height of 135.",
+      "The person with History does not own Dog.",
+      "The person with Albert lives to the left of the person with David.",
+      "The person with Charles lives somewhere to the left of the person with David."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "FavoriteActor",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with 135 likes Leonardo DiCaprio."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Favorite Subject",
+        "attr2": "Biology",
+        "text": "The person with 130 has Biology."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 145,
+        "dim2": "Pet",
+        "attr2": "Fish",
+        "text": "The person with 145 keeps Fish."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteActor",
+        "attr1": "Leonardo DiCaprio",
+        "dim2": "Favorite Subject",
+        "attr2": "History",
+        "text": "The person with Leonardo DiCaprio has History."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteActor",
+        "attr1": "Robert De Niro",
+        "dim2": "Pet",
+        "attr2": "Bird",
+        "text": "The person with Robert De Niro has Bird."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Subject",
+        "attr1": "Biology",
+        "dim2": "Pet",
+        "attr2": "Bird",
+        "text": "The person with Biology owns Bird."
+      },
+      {
+        "type": "negative",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Favorite Subject",
+        "attr2": "Mathematics",
+        "text": "The person with 130 does not have Mathematics."
+      },
+      {
+        "type": "negative",
+        "dim1": "Pet",
+        "attr1": "Fish",
+        "dim2": "Height",
+        "attr2": 135,
+        "text": "The Fish does not has a height of 135."
+      },
+      {
+        "type": "negative",
+        "dim1": "Favorite Subject",
+        "attr1": "History",
+        "dim2": "Pet",
+        "attr2": "Dog",
+        "text": "The person with History does not own Dog."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "David",
+        "text": "The person with Albert lives to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives somewhere to the left of the person with David."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Robert De Niro",
+        "Leonardo DiCaprio",
+        "Morgan Freeman",
+        "Tom Hanks"
+      ],
+      [
+        "Biology",
+        "History",
+        "Mathematics",
+        "English"
+      ],
+      [
+        "Bird",
+        "Cat",
+        "Dog",
+        "Fish"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4026,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "FurnitureType",
+      "TVShow",
+      "Food",
+      "Phone Brand"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Coffee Table",
+        "Dining Table",
+        "Sofa",
+        "Chair"
+      ],
+      [
+        "Stranger Things",
+        "Game of Thrones",
+        "Breaking Bad",
+        "Friends"
+      ],
+      [
+        "Hamburger",
+        "Pasta",
+        "Pizza",
+        "Sushi"
+      ],
+      [
+        "Huawei",
+        "Samsung",
+        "Xiaomi",
+        "Apple"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 4 has Dining Table.",
+      "The person with 3 has Game of Thrones.",
+      "The person who has 2 enjoys eating Pizza.",
+      "The person with 4 owns Samsung.",
+      "The person who has Game of Thrones has Coffee Table.",
+      "The person who has Chair prefers Hamburger.",
+      "The person with Dining Table prefers Samsung.",
+      "The person with Stranger Things enjoys eating Hamburger.",
+      "The person with Samsung does not prefer Sushi.",
+      "The person with Albert lives in the first house.",
+      "The person with Charles lives directly to the left of the person with David."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "FurnitureType",
+        "attr2": "Dining Table",
+        "text": "The person with 4 has Dining Table."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "TVShow",
+        "attr2": "Game of Thrones",
+        "text": "The person with 3 has Game of Thrones."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "Food",
+        "attr2": "Pizza",
+        "text": "The person who has 2 enjoys eating Pizza."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "Phone Brand",
+        "attr2": "Samsung",
+        "text": "The person with 4 owns Samsung."
+      },
+      {
+        "type": "positive",
+        "dim1": "FurnitureType",
+        "attr1": "Coffee Table",
+        "dim2": "TVShow",
+        "attr2": "Game of Thrones",
+        "text": "The person who has Game of Thrones has Coffee Table."
+      },
+      {
+        "type": "positive",
+        "dim1": "FurnitureType",
+        "attr1": "Chair",
+        "dim2": "Food",
+        "attr2": "Hamburger",
+        "text": "The person who has Chair prefers Hamburger."
+      },
+      {
+        "type": "positive",
+        "dim1": "FurnitureType",
+        "attr1": "Dining Table",
+        "dim2": "Phone Brand",
+        "attr2": "Samsung",
+        "text": "The person with Dining Table prefers Samsung."
+      },
+      {
+        "type": "positive",
+        "dim1": "TVShow",
+        "attr1": "Stranger Things",
+        "dim2": "Food",
+        "attr2": "Hamburger",
+        "text": "The person with Stranger Things enjoys eating Hamburger."
+      },
+      {
+        "type": "negative",
+        "dim1": "Phone Brand",
+        "attr1": "Samsung",
+        "dim2": "Food",
+        "attr2": "Sushi",
+        "text": "The person with Samsung does not prefer Sushi."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives in the first house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives directly to the left of the person with David."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles",
+        "David"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Chair",
+        "Sofa",
+        "Coffee Table",
+        "Dining Table"
+      ],
+      [
+        "Stranger Things",
+        "Friends",
+        "Game of Thrones",
+        "Breaking Bad"
+      ],
+      [
+        "Hamburger",
+        "Pizza",
+        "Sushi",
+        "Pasta"
+      ],
+      [
+        "Xiaomi",
+        "Apple",
+        "Huawei",
+        "Samsung"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4027,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Language",
+      "FavoriteAuthor"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "David",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Mandarin",
+        "French",
+        "English",
+        "Spanish"
+      ],
+      [
+        "George Orwell",
+        "William Shakespeare",
+        "Agatha Christie",
+        "J.K. Rowling"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person who has Mandarin has 20.",
+      "The person with 21 has J.K. Rowling.",
+      "The person who has George Orwell has Mandarin.",
+      "The person with George Orwell does not have Spanish.",
+      "The person with Albert lives somewhere to the left of the person with Charles.",
+      "The person with David lives directly to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Language",
+        "attr2": "Mandarin",
+        "text": "The person who has Mandarin has 20."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "FavoriteAuthor",
+        "attr2": "J.K. Rowling",
+        "text": "The person with 21 has J.K. Rowling."
+      },
+      {
+        "type": "positive",
+        "dim1": "Language",
+        "attr1": "Mandarin",
+        "dim2": "FavoriteAuthor",
+        "attr2": "George Orwell",
+        "text": "The person who has George Orwell has Mandarin."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteAuthor",
+        "attr1": "George Orwell",
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with George Orwell does not have Spanish."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives somewhere to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives directly to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "David",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Mandarin",
+        "English",
+        "French",
+        "Spanish"
+      ],
+      [
+        "George Orwell",
+        "J.K. Rowling",
+        "William Shakespeare",
+        "Agatha Christie"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4028,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "FavoriteFestival",
+      "Nationality",
+      "FavoriteFashionDesigner",
+      "Holiday"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Tomorrowland",
+        "Coachella",
+        "Glastonbury"
+      ],
+      [
+        "Ukrainian",
+        "Spaniard",
+        "Englishman"
+      ],
+      [
+        "Coco Chanel",
+        "Giorgio Armani",
+        "Donatella Versace"
+      ],
+      [
+        "Christmas",
+        "Thanksgiving",
+        "New Year's Eve"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person who has Glastonbury has 1.",
+      "The person with 1 resides in Ukrainian.",
+      "The person with 2 has Giorgio Armani.",
+      "The person with 2 has New Year's Eve.",
+      "The person with Coachella inhabits Englishman.",
+      "The person with Tomorrowland has Coco Chanel.",
+      "The person with Giorgio Armani does not have Thanksgiving.",
+      "The person with Christmas does not resides in Ukrainian.",
+      "The person with Thanksgiving does not resides in Spaniard.",
+      "The person with Bernard lives immediately to the left of the person with Charles.",
+      "The person with Albert lives in the third house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "FavoriteFestival",
+        "attr2": "Glastonbury",
+        "text": "The person who has Glastonbury has 1."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "Nationality",
+        "attr2": "Ukrainian",
+        "text": "The person with 1 resides in Ukrainian."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Giorgio Armani",
+        "text": "The person with 2 has Giorgio Armani."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "Holiday",
+        "attr2": "New Year's Eve",
+        "text": "The person with 2 has New Year's Eve."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteFestival",
+        "attr1": "Coachella",
+        "dim2": "Nationality",
+        "attr2": "Englishman",
+        "text": "The person with Coachella inhabits Englishman."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteFestival",
+        "attr1": "Tomorrowland",
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Coco Chanel",
+        "text": "The person with Tomorrowland has Coco Chanel."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteFashionDesigner",
+        "attr1": "Giorgio Armani",
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with Giorgio Armani does not have Thanksgiving."
+      },
+      {
+        "type": "negative",
+        "dim1": "Holiday",
+        "attr1": "Christmas",
+        "dim2": "Nationality",
+        "attr2": "Ukrainian",
+        "text": "The person with Christmas does not resides in Ukrainian."
+      },
+      {
+        "type": "negative",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "Nationality",
+        "attr2": "Spaniard",
+        "text": "The person with Thanksgiving does not resides in Spaniard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives immediately to the left of the person with Charles."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the third house."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Glastonbury",
+        "Coachella",
+        "Tomorrowland"
+      ],
+      [
+        "Ukrainian",
+        "Englishman",
+        "Spaniard"
+      ],
+      [
+        "Donatella Versace",
+        "Giorgio Armani",
+        "Coco Chanel"
+      ],
+      [
+        "Thanksgiving",
+        "New Year's Eve",
+        "Christmas"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4029,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "Brand",
+      "FavoriteCelebrity",
+      "ShoeTypes",
+      "Movie"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "David",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Adidas",
+        "Nike",
+        "Apple",
+        "Samsung"
+      ],
+      [
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Angelina Jolie",
+        "Beyonc茅"
+      ],
+      [
+        "Boots",
+        "Slippers",
+        "Sneakers",
+        "Sandals"
+      ],
+      [
+        "The Lord of the Rings",
+        "The Dark Knight",
+        "The Shawshank Redemption",
+        "The Godfather"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 4 owns Apple.",
+      "The person with 2 has Angelina Jolie.",
+      "The person with 3 has Sneakers.",
+      "The person who has 3 enjoys The Dark Knight.",
+      "The person with Apple has Leonardo DiCaprio.",
+      "The person who prefers Nike has Sneakers.",
+      "The person who enjoys The Lord of the Rings prefers Apple.",
+      "The person who has Sneakers has Tom Hanks.",
+      "The person with The Dark Knight does not have Boots.",
+      "The person with The Dark Knight does not prefer Samsung.",
+      "The person with Albert lives in the third house.",
+      "The person with Albert lives immediately to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "Brand",
+        "attr2": "Apple",
+        "text": "The person with 4 owns Apple."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Angelina Jolie",
+        "text": "The person with 2 has Angelina Jolie."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person with 3 has Sneakers."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "Movie",
+        "attr2": "The Dark Knight",
+        "text": "The person who has 3 enjoys The Dark Knight."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Apple",
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with Apple has Leonardo DiCaprio."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Nike",
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person who prefers Nike has Sneakers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Brand",
+        "attr1": "Apple",
+        "dim2": "Movie",
+        "attr2": "The Lord of the Rings",
+        "text": "The person who enjoys The Lord of the Rings prefers Apple."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteCelebrity",
+        "attr1": "Tom Hanks",
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person who has Sneakers has Tom Hanks."
+      },
+      {
+        "type": "negative",
+        "dim1": "Movie",
+        "attr1": "The Dark Knight",
+        "dim2": "ShoeTypes",
+        "attr2": "Boots",
+        "text": "The person with The Dark Knight does not have Boots."
+      },
+      {
+        "type": "negative",
+        "dim1": "Movie",
+        "attr1": "The Dark Knight",
+        "dim2": "Brand",
+        "attr2": "Samsung",
+        "text": "The person with The Dark Knight does not prefer Samsung."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives immediately to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "David",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Samsung",
+        "Adidas",
+        "Nike",
+        "Apple"
+      ],
+      [
+        "Beyonc茅",
+        "Angelina Jolie",
+        "Tom Hanks",
+        "Leonardo DiCaprio"
+      ],
+      [
+        "Boots",
+        "Slippers",
+        "Sneakers",
+        "Sandals"
+      ],
+      [
+        "The Shawshank Redemption",
+        "The Godfather",
+        "The Dark Knight",
+        "The Lord of the Rings"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4030,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "ShoeTypes",
+      "VideoGame",
+      "ClothTypes",
+      "ClothingBrand"
+    ],
+    "entities": [
+      [
+        "David",
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Sandals",
+        "Boots",
+        "Sneakers",
+        "Slippers"
+      ],
+      [
+        "Fortnite",
+        "Minecraft",
+        "Call of Duty",
+        "Grand Theft Auto V"
+      ],
+      [
+        "Jeans",
+        "Hoodie",
+        "Sweater",
+        "T-shirt"
+      ],
+      [
+        "Zara",
+        "H&M",
+        "Nike",
+        "Adidas"
+      ]
+    ],
+    "num_clues": 13,
+    "clues": [
+      "The person who has Sneakers has 2.",
+      "The person with 2 has Call of Duty.",
+      "The person who has 1 has Jeans.",
+      "The person with 4 owns Zara.",
+      "The person with Sneakers has Call of Duty.",
+      "The person with Slippers has Jeans.",
+      "The person with Sneakers uses H&M.",
+      "The person with Call of Duty has T-shirt.",
+      "The person with Minecraft does not have 2.",
+      "The person with Sweater does not have 1.",
+      "The person with Zara does not have 3.",
+      "The person with Bernard lives in the fourth house.",
+      "The person with Bernard lives in the fourth house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person who has Sneakers has 2."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "VideoGame",
+        "attr2": "Call of Duty",
+        "text": "The person with 2 has Call of Duty."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "ClothTypes",
+        "attr2": "Jeans",
+        "text": "The person who has 1 has Jeans."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "ClothingBrand",
+        "attr2": "Zara",
+        "text": "The person with 4 owns Zara."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "VideoGame",
+        "attr2": "Call of Duty",
+        "text": "The person with Sneakers has Call of Duty."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Slippers",
+        "dim2": "ClothTypes",
+        "attr2": "Jeans",
+        "text": "The person with Slippers has Jeans."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "ClothingBrand",
+        "attr2": "H&M",
+        "text": "The person with Sneakers uses H&M."
+      },
+      {
+        "type": "positive",
+        "dim1": "VideoGame",
+        "attr1": "Call of Duty",
+        "dim2": "ClothTypes",
+        "attr2": "T-shirt",
+        "text": "The person with Call of Duty has T-shirt."
+      },
+      {
+        "type": "negative",
+        "dim1": "VideoGame",
+        "attr1": "Minecraft",
+        "dim2": "House Num",
+        "attr2": 2,
+        "text": "The person with Minecraft does not have 2."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothTypes",
+        "attr1": "Sweater",
+        "dim2": "House Num",
+        "attr2": 1,
+        "text": "The person with Sweater does not have 1."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothingBrand",
+        "attr1": "Zara",
+        "dim2": "House Num",
+        "attr2": 3,
+        "text": "The person with Zara does not have 3."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the fourth house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the fourth house."
+      }
+    ],
+    "solution": [
+      [
+        "David",
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Slippers",
+        "Sneakers",
+        "Sandals",
+        "Boots"
+      ],
+      [
+        "Grand Theft Auto V",
+        "Call of Duty",
+        "Fortnite",
+        "Minecraft"
+      ],
+      [
+        "Jeans",
+        "T-shirt",
+        "Hoodie",
+        "Sweater"
+      ],
+      [
+        "Adidas",
+        "H&M",
+        "Nike",
+        "Zara"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4031,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Interested HistoricalEvent",
+      "Favorite Superhero",
+      "MusicGenre",
+      "YouTubeChannel"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Albert",
+        "David",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "World War II",
+        "American Civil War",
+        "French Revolution",
+        "World War I"
+      ],
+      [
+        "Batman",
+        "Wonder Woman",
+        "Spider-Man",
+        "Superman"
+      ],
+      [
+        "Jazz",
+        "Rock",
+        "Classical",
+        "Pop"
+      ],
+      [
+        "T-Series",
+        "PewDiePie",
+        "Cocomelon",
+        "MrBeast"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 20 has World War II.",
+      "The person with 20 has Wonder Woman.",
+      "The person with 22 listens to Jazz.",
+      "The person with 20 has Cocomelon.",
+      "The person who has Spider-Man has French Revolution.",
+      "The person with World War I enjoys Classical.",
+      "The person with French Revolution has MrBeast.",
+      "The person who has Superman enjoys Jazz.",
+      "The person with Cocomelon does not have World War I.",
+      "The person with Cocomelon does not have Spider-Man.",
+      "The person with Charles lives somewhere to the left of the person with David.",
+      "The person with David lives immediately to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Interested HistoricalEvent",
+        "attr2": "World War II",
+        "text": "The person with 20 has World War II."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Favorite Superhero",
+        "attr2": "Wonder Woman",
+        "text": "The person with 20 has Wonder Woman."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "MusicGenre",
+        "attr2": "Jazz",
+        "text": "The person with 22 listens to Jazz."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "YouTubeChannel",
+        "attr2": "Cocomelon",
+        "text": "The person with 20 has Cocomelon."
+      },
+      {
+        "type": "positive",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "French Revolution",
+        "dim2": "Favorite Superhero",
+        "attr2": "Spider-Man",
+        "text": "The person who has Spider-Man has French Revolution."
+      },
+      {
+        "type": "positive",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "World War I",
+        "dim2": "MusicGenre",
+        "attr2": "Classical",
+        "text": "The person with World War I enjoys Classical."
+      },
+      {
+        "type": "positive",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "French Revolution",
+        "dim2": "YouTubeChannel",
+        "attr2": "MrBeast",
+        "text": "The person with French Revolution has MrBeast."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Superman",
+        "dim2": "MusicGenre",
+        "attr2": "Jazz",
+        "text": "The person who has Superman enjoys Jazz."
+      },
+      {
+        "type": "negative",
+        "dim1": "YouTubeChannel",
+        "attr1": "Cocomelon",
+        "dim2": "Interested HistoricalEvent",
+        "attr2": "World War I",
+        "text": "The person with Cocomelon does not have World War I."
+      },
+      {
+        "type": "negative",
+        "dim1": "YouTubeChannel",
+        "attr1": "Cocomelon",
+        "dim2": "Favorite Superhero",
+        "attr2": "Spider-Man",
+        "text": "The person with Cocomelon does not have Spider-Man."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives somewhere to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives immediately to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Albert",
+        "David",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "World War II",
+        "French Revolution",
+        "American Civil War",
+        "World War I"
+      ],
+      [
+        "Wonder Woman",
+        "Spider-Man",
+        "Superman",
+        "Batman"
+      ],
+      [
+        "Rock",
+        "Pop",
+        "Jazz",
+        "Classical"
+      ],
+      [
+        "Cocomelon",
+        "MrBeast",
+        "T-Series",
+        "PewDiePie"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4032,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Age",
+      "VideoGame",
+      "FavoriteBook",
+      "University"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Fortnite",
+        "Call of Duty",
+        "Minecraft"
+      ],
+      [
+        "1984",
+        "Pride and Prejudice",
+        "The Great Gatsby"
+      ],
+      [
+        "Harvard University",
+        "MIT",
+        "Stanford University"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 21 has Call of Duty.",
+      "The person with 21 has Pride and Prejudice.",
+      "The person with 22 has MIT.",
+      "The person who has Pride and Prejudice has Call of Duty.",
+      "The person with Fortnite has Harvard University.",
+      "The person with The Great Gatsby has MIT.",
+      "The person with Pride and Prejudice does not have 22.",
+      "The person with Minecraft does not have Pride and Prejudice.",
+      "The person with Charles lives in the position 22 house.",
+      "The person with Bernard lives in the position 21 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "VideoGame",
+        "attr2": "Call of Duty",
+        "text": "The person with 21 has Call of Duty."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person with 21 has Pride and Prejudice."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "University",
+        "attr2": "MIT",
+        "text": "The person with 22 has MIT."
+      },
+      {
+        "type": "positive",
+        "dim1": "VideoGame",
+        "attr1": "Call of Duty",
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person who has Pride and Prejudice has Call of Duty."
+      },
+      {
+        "type": "positive",
+        "dim1": "VideoGame",
+        "attr1": "Fortnite",
+        "dim2": "University",
+        "attr2": "Harvard University",
+        "text": "The person with Fortnite has Harvard University."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteBook",
+        "attr1": "The Great Gatsby",
+        "dim2": "University",
+        "attr2": "MIT",
+        "text": "The person with The Great Gatsby has MIT."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteBook",
+        "attr1": "Pride and Prejudice",
+        "dim2": "Age",
+        "attr2": 22,
+        "text": "The person with Pride and Prejudice does not have 22."
+      },
+      {
+        "type": "negative",
+        "dim1": "VideoGame",
+        "attr1": "Minecraft",
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person with Minecraft does not have Pride and Prejudice."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Charles lives in the position 22 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Charles",
+        "text": "The person with Bernard lives in the position 21 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Fortnite",
+        "Call of Duty",
+        "Minecraft"
+      ],
+      [
+        "1984",
+        "Pride and Prejudice",
+        "The Great Gatsby"
+      ],
+      [
+        "Harvard University",
+        "Stanford University",
+        "MIT"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4033,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "Interested HistoricalEvent",
+      "AccessoryTypes",
+      "FavoriteLuxuryBrand"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "World War II",
+        "French Revolution",
+        "World War I"
+      ],
+      [
+        "Sunglasses",
+        "Bracelet",
+        "Watch"
+      ],
+      [
+        "Louis Vuitton",
+        "Chanel",
+        "Gucci"
+      ]
+    ],
+    "num_clues": 9,
+    "clues": [
+      "The person with 140 has French Revolution.",
+      "The person with 140 wears Bracelet.",
+      "The person with 140 uses Gucci.",
+      "The person with French Revolution has Bracelet.",
+      "The person who has World War II uses Louis Vuitton.",
+      "The person who uses Louis Vuitton wears Sunglasses.",
+      "The person with Bracelet does not i 135.",
+      "The person with Albert lives in the position 130 house.",
+      "The person with Albert lives in the position 130 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Interested HistoricalEvent",
+        "attr2": "French Revolution",
+        "text": "The person with 140 has French Revolution."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "AccessoryTypes",
+        "attr2": "Bracelet",
+        "text": "The person with 140 wears Bracelet."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Gucci",
+        "text": "The person with 140 uses Gucci."
+      },
+      {
+        "type": "positive",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "French Revolution",
+        "dim2": "AccessoryTypes",
+        "attr2": "Bracelet",
+        "text": "The person with French Revolution has Bracelet."
+      },
+      {
+        "type": "positive",
+        "dim1": "Interested HistoricalEvent",
+        "attr1": "World War II",
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Louis Vuitton",
+        "text": "The person who has World War II uses Louis Vuitton."
+      },
+      {
+        "type": "positive",
+        "dim1": "AccessoryTypes",
+        "attr1": "Sunglasses",
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Louis Vuitton",
+        "text": "The person who uses Louis Vuitton wears Sunglasses."
+      },
+      {
+        "type": "negative",
+        "dim1": "AccessoryTypes",
+        "attr1": "Bracelet",
+        "dim2": "Height",
+        "attr2": 135,
+        "text": "The person with Bracelet does not i 135."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives in the position 130 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives in the position 130 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "World War II",
+        "World War I",
+        "French Revolution"
+      ],
+      [
+        "Sunglasses",
+        "Watch",
+        "Bracelet"
+      ],
+      [
+        "Louis Vuitton",
+        "Chanel",
+        "Gucci"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4034,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteCelebrity",
+      "ClothTypes"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Beyonc茅",
+        "Leonardo DiCaprio",
+        "Tom Hanks"
+      ],
+      [
+        "Hoodie",
+        "Sweater",
+        "T-shirt"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person with 135 has Tom Hanks.",
+      "The person with 135 has T-shirt.",
+      "The person with Tom Hanks has T-shirt.",
+      "The person with Sweater does not have Tom Hanks.",
+      "The person with Hoodie does not has a height of 130.",
+      "The person with Charles lives to the left of the person with Albert.",
+      "The person with Albert lives in the position 140 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Tom Hanks",
+        "text": "The person with 135 has Tom Hanks."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "ClothTypes",
+        "attr2": "T-shirt",
+        "text": "The person with 135 has T-shirt."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteCelebrity",
+        "attr1": "Tom Hanks",
+        "dim2": "ClothTypes",
+        "attr2": "T-shirt",
+        "text": "The person with Tom Hanks has T-shirt."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothTypes",
+        "attr1": "Sweater",
+        "dim2": "FavoriteCelebrity",
+        "attr2": "Tom Hanks",
+        "text": "The person with Sweater does not have Tom Hanks."
+      },
+      {
+        "type": "negative",
+        "dim1": "ClothTypes",
+        "attr1": "Hoodie",
+        "dim2": "Height",
+        "attr2": 130,
+        "text": "The person with Hoodie does not has a height of 130."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the position 140 house."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Beyonc茅",
+        "Tom Hanks",
+        "Leonardo DiCaprio"
+      ],
+      [
+        "Sweater",
+        "T-shirt",
+        "Hoodie"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4035,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "FavoriteLuxuryBrand",
+      "FavoriteFestival",
+      "Drink",
+      "Travel Destination"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Gucci",
+        "Chanel",
+        "Louis Vuitton",
+        "Prada"
+      ],
+      [
+        "Burning Man",
+        "Tomorrowland",
+        "Glastonbury",
+        "Coachella"
+      ],
+      [
+        "Milk",
+        "Tea",
+        "Coffee",
+        "Juice"
+      ],
+      [
+        "London",
+        "Tokyo",
+        "Paris",
+        "New York"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 130 prefers Gucci.",
+      "The person with 135 has Glastonbury.",
+      "The person with 135 enjoys Tea.",
+      "The person with 130 has London.",
+      "The person with Louis Vuitton has Coachella.",
+      "The person who uses Louis Vuitton drinks Milk.",
+      "The person with Louis Vuitton has Tokyo.",
+      "The person with Coachella prefers Milk.",
+      "The person with Louis Vuitton does not have New York.",
+      "The person with 130 does not have Glastonbury.",
+      "The person with Charles lives to the left of the person with David.",
+      "The person with Albert lives to the left of the person with David."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FavoriteLuxuryBrand",
+        "attr2": "Gucci",
+        "text": "The person with 130 prefers Gucci."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "FavoriteFestival",
+        "attr2": "Glastonbury",
+        "text": "The person with 135 has Glastonbury."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "Drink",
+        "attr2": "Tea",
+        "text": "The person with 135 enjoys Tea."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Travel Destination",
+        "attr2": "London",
+        "text": "The person with 130 has London."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "FavoriteFestival",
+        "attr2": "Coachella",
+        "text": "The person with Louis Vuitton has Coachella."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "Drink",
+        "attr2": "Milk",
+        "text": "The person who uses Louis Vuitton drinks Milk."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "Travel Destination",
+        "attr2": "Tokyo",
+        "text": "The person with Louis Vuitton has Tokyo."
+      },
+      {
+        "type": "positive",
+        "dim1": "FavoriteFestival",
+        "attr1": "Coachella",
+        "dim2": "Drink",
+        "attr2": "Milk",
+        "text": "The person with Coachella prefers Milk."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteLuxuryBrand",
+        "attr1": "Louis Vuitton",
+        "dim2": "Travel Destination",
+        "attr2": "New York",
+        "text": "The person with Louis Vuitton does not have New York."
+      },
+      {
+        "type": "negative",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "FavoriteFestival",
+        "attr2": "Glastonbury",
+        "text": "The person with 130 does not have Glastonbury."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "David",
+        "text": "The person with Albert lives to the left of the person with David."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles",
+        "David"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Gucci",
+        "Prada",
+        "Chanel",
+        "Louis Vuitton"
+      ],
+      [
+        "Tomorrowland",
+        "Glastonbury",
+        "Burning Man",
+        "Coachella"
+      ],
+      [
+        "Juice",
+        "Tea",
+        "Coffee",
+        "Milk"
+      ],
+      [
+        "London",
+        "New York",
+        "Paris",
+        "Tokyo"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4036,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "BookTitle",
+      "Favorite Superhero"
+    ],
+    "entities": [
+      [
+        "David",
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Pride and Prejudice",
+        "1984",
+        "The Great Gatsby",
+        "To Kill a Mockingbird"
+      ],
+      [
+        "Spider-Man",
+        "Wonder Woman",
+        "Batman",
+        "Superman"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 4 enjoys reading The Great Gatsby.",
+      "The person with 1 has Superman.",
+      "The person with Pride and Prejudice has Superman.",
+      "The person with Batman does not have 1.",
+      "The person with Batman does not enjoys reading Pride and Prejudice.",
+      "The person with 3 does not is reading The Great Gatsby.",
+      "The person with Charles lives in the fourth house.",
+      "The person with Albert lives in the second house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "BookTitle",
+        "attr2": "The Great Gatsby",
+        "text": "The person with 4 enjoys reading The Great Gatsby."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "Favorite Superhero",
+        "attr2": "Superman",
+        "text": "The person with 1 has Superman."
+      },
+      {
+        "type": "positive",
+        "dim1": "BookTitle",
+        "attr1": "Pride and Prejudice",
+        "dim2": "Favorite Superhero",
+        "attr2": "Superman",
+        "text": "The person with Pride and Prejudice has Superman."
+      },
+      {
+        "type": "negative",
+        "dim1": "Favorite Superhero",
+        "attr1": "Batman",
+        "dim2": "House Num",
+        "attr2": 1,
+        "text": "The person with Batman does not have 1."
+      },
+      {
+        "type": "negative",
+        "dim1": "Favorite Superhero",
+        "attr1": "Batman",
+        "dim2": "BookTitle",
+        "attr2": "Pride and Prejudice",
+        "text": "The person with Batman does not enjoys reading Pride and Prejudice."
+      },
+      {
+        "type": "negative",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "BookTitle",
+        "attr2": "The Great Gatsby",
+        "text": "The person with 3 does not is reading The Great Gatsby."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Charles",
+        "text": "The person with Charles lives in the fourth house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives in the second house."
+      }
+    ],
+    "solution": [
+      [
+        "David",
+        "Albert",
+        "Bernard",
+        "Charles"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Pride and Prejudice",
+        "To Kill a Mockingbird",
+        "1984",
+        "The Great Gatsby"
+      ],
+      [
+        "Superman",
+        "Batman",
+        "Spider-Man",
+        "Wonder Woman"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4037,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Height",
+      "MusicalInstrument",
+      "BookTitle"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Violin",
+        "Guitar",
+        "Piano"
+      ],
+      [
+        "Pride and Prejudice",
+        "1984",
+        "To Kill a Mockingbird"
+      ]
+    ],
+    "num_clues": 6,
+    "clues": [
+      "The person with 130 owns Violin.",
+      "The person with 130 enjoys reading Pride and Prejudice.",
+      "The person who plays Piano enjoys reading 1984.",
+      "The person with Piano does not has a height of 135.",
+      "The person with Albert lives in the position 135 house.",
+      "The person with Albert lives in the position 135 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "MusicalInstrument",
+        "attr2": "Violin",
+        "text": "The person with 130 owns Violin."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "BookTitle",
+        "attr2": "Pride and Prejudice",
+        "text": "The person with 130 enjoys reading Pride and Prejudice."
+      },
+      {
+        "type": "positive",
+        "dim1": "MusicalInstrument",
+        "attr1": "Piano",
+        "dim2": "BookTitle",
+        "attr2": "1984",
+        "text": "The person who plays Piano enjoys reading 1984."
+      },
+      {
+        "type": "negative",
+        "dim1": "MusicalInstrument",
+        "attr1": "Piano",
+        "dim2": "Height",
+        "attr2": 135,
+        "text": "The person with Piano does not has a height of 135."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Charles",
+        "text": "The person with Albert lives in the position 135 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the position 135 house."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Albert",
+        "Charles"
+      ],
+      [
+        130,
+        135,
+        140
+      ],
+      [
+        "Violin",
+        "Guitar",
+        "Piano"
+      ],
+      [
+        "Pride and Prejudice",
+        "To Kill a Mockingbird",
+        "1984"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4038,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "Food",
+      "Brand"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Sushi",
+        "Pizza",
+        "Pasta",
+        "Hamburger"
+      ],
+      [
+        "Nike",
+        "Adidas",
+        "Samsung",
+        "Apple"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person with 130 prefers Pizza.",
+      "The person with 140 owns Adidas.",
+      "The person with Sushi prefers Adidas.",
+      "The person with Pasta does not prefer Nike.",
+      "The person with Pasta does not i 130.",
+      "The person with David lives in the position 140 house.",
+      "The person with Bernard lives in the position 145 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Food",
+        "attr2": "Pizza",
+        "text": "The person with 130 prefers Pizza."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Brand",
+        "attr2": "Adidas",
+        "text": "The person with 140 owns Adidas."
+      },
+      {
+        "type": "positive",
+        "dim1": "Food",
+        "attr1": "Sushi",
+        "dim2": "Brand",
+        "attr2": "Adidas",
+        "text": "The person with Sushi prefers Adidas."
+      },
+      {
+        "type": "negative",
+        "dim1": "Food",
+        "attr1": "Pasta",
+        "dim2": "Brand",
+        "attr2": "Nike",
+        "text": "The person with Pasta does not prefer Nike."
+      },
+      {
+        "type": "negative",
+        "dim1": "Food",
+        "attr1": "Pasta",
+        "dim2": "Height",
+        "attr2": 130,
+        "text": "The person with Pasta does not i 130."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives in the position 140 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the position 145 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Pizza",
+        "Hamburger",
+        "Sushi",
+        "Pasta"
+      ],
+      [
+        "Samsung",
+        "Nike",
+        "Adidas",
+        "Apple"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4039,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "Profession",
+      "City"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Engineer",
+        "Teacher",
+        "Doctor"
+      ],
+      [
+        "New York",
+        "London",
+        "Paris"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person who has Engineer has 2.",
+      "The person who has London has 3.",
+      "The person who has Paris has Doctor.",
+      "The person with New York does not have Teacher.",
+      "The person with 2 does not have Doctor.",
+      "The person with Bernard lives to the left of the person with Albert.",
+      "The person with Charles lives directly to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "Profession",
+        "attr2": "Engineer",
+        "text": "The person who has Engineer has 2."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "City",
+        "attr2": "London",
+        "text": "The person who has London has 3."
+      },
+      {
+        "type": "positive",
+        "dim1": "Profession",
+        "attr1": "Doctor",
+        "dim2": "City",
+        "attr2": "Paris",
+        "text": "The person who has Paris has Doctor."
+      },
+      {
+        "type": "negative",
+        "dim1": "City",
+        "attr1": "New York",
+        "dim2": "Profession",
+        "attr2": "Teacher",
+        "text": "The person with New York does not have Teacher."
+      },
+      {
+        "type": "negative",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "Profession",
+        "attr2": "Doctor",
+        "text": "The person with 2 does not have Doctor."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives directly to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "Doctor",
+        "Engineer",
+        "Teacher"
+      ],
+      [
+        "Paris",
+        "New York",
+        "London"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4040,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "fruit",
+      "FavoriteFashionDesigner"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "grapefruit",
+        "cranberry",
+        "apple"
+      ],
+      [
+        "Donatella Versace",
+        "Giorgio Armani",
+        "Coco Chanel"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 3 has grapefruit.",
+      "The person with 2 has Coco Chanel.",
+      "The person with cranberry has Giorgio Armani.",
+      "The person with 1 does not have Coco Chanel.",
+      "The person with cranberry does not have 3.",
+      "The person with cranberry does not have Donatella Versace.",
+      "The person with Albert lives in the third house.",
+      "The person with Bernard lives to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 3,
+        "dim2": "fruit",
+        "attr2": "grapefruit",
+        "text": "The person with 3 has grapefruit."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Coco Chanel",
+        "text": "The person with 2 has Coco Chanel."
+      },
+      {
+        "type": "positive",
+        "dim1": "fruit",
+        "attr1": "cranberry",
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Giorgio Armani",
+        "text": "The person with cranberry has Giorgio Armani."
+      },
+      {
+        "type": "negative",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Coco Chanel",
+        "text": "The person with 1 does not have Coco Chanel."
+      },
+      {
+        "type": "negative",
+        "dim1": "fruit",
+        "attr1": "cranberry",
+        "dim2": "House Num",
+        "attr2": 3,
+        "text": "The person with cranberry does not have 3."
+      },
+      {
+        "type": "negative",
+        "dim1": "fruit",
+        "attr1": "cranberry",
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Donatella Versace",
+        "text": "The person with cranberry does not have Donatella Versace."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the third house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Bernard",
+        "attr2": "Albert",
+        "text": "The person with Bernard lives to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        "cranberry",
+        "apple",
+        "grapefruit"
+      ],
+      [
+        "Giorgio Armani",
+        "Coco Chanel",
+        "Donatella Versace"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4041,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "Food",
+      "Food"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "David",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Pasta",
+        "Sushi",
+        "Pizza",
+        "Hamburger"
+      ],
+      [
+        "Hamburger",
+        "Pasta",
+        "Pizza",
+        "Sushi"
+      ]
+    ],
+    "num_clues": 7,
+    "clues": [
+      "The person with 140 enjoys eating Pasta.",
+      "The person with 140 prefers Sushi.",
+      "The person who prefers Hamburger prefers Pizza.",
+      "The person with Pasta does not i 145.",
+      "The person with Sushi does not prefer Sushi.",
+      "The person with David lives in the position 135 house.",
+      "The person with David lives in the position 135 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Food",
+        "attr2": "Pasta",
+        "text": "The person with 140 enjoys eating Pasta."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 140,
+        "dim2": "Food",
+        "attr2": "Sushi",
+        "text": "The person with 140 prefers Sushi."
+      },
+      {
+        "type": "positive",
+        "dim1": "Food",
+        "attr1": "Pizza",
+        "dim2": "Food",
+        "attr2": "Hamburger",
+        "text": "The person who prefers Hamburger prefers Pizza."
+      },
+      {
+        "type": "negative",
+        "dim1": "Food",
+        "attr1": "Pasta",
+        "dim2": "Height",
+        "attr2": 145,
+        "text": "The person with Pasta does not i 145."
+      },
+      {
+        "type": "negative",
+        "dim1": "Food",
+        "attr1": "Sushi",
+        "dim2": "Food",
+        "attr2": "Sushi",
+        "text": "The person with Sushi does not prefer Sushi."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives in the position 135 house."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Charles",
+        "text": "The person with David lives in the position 135 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "David",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "Sushi",
+        "Hamburger",
+        "Pasta",
+        "Pizza"
+      ],
+      [
+        "Pasta",
+        "Pizza",
+        "Sushi",
+        "Hamburger"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4042,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "House Num",
+      "fruit",
+      "Favorite Superhero",
+      "FavoriteBook"
+    ],
+    "entities": [
+      [
+        "David",
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "apple",
+        "grapefruit",
+        "cranberry",
+        "orange"
+      ],
+      [
+        "Wonder Woman",
+        "Batman",
+        "Superman",
+        "Spider-Man"
+      ],
+      [
+        "1984",
+        "Moby Dick",
+        "Pride and Prejudice",
+        "The Great Gatsby"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person who has apple has 4.",
+      "The person with 1 has Batman.",
+      "The person who has Pride and Prejudice has 2.",
+      "The person with grapefruit has Spider-Man.",
+      "The person with cranberry has 1984.",
+      "The person with Superman has The Great Gatsby.",
+      "The person with David lives somewhere to the left of the person with Albert.",
+      "The person with Charles lives directly to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 4,
+        "dim2": "fruit",
+        "attr2": "apple",
+        "text": "The person who has apple has 4."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 1,
+        "dim2": "Favorite Superhero",
+        "attr2": "Batman",
+        "text": "The person with 1 has Batman."
+      },
+      {
+        "type": "positive",
+        "dim1": "House Num",
+        "attr1": 2,
+        "dim2": "FavoriteBook",
+        "attr2": "Pride and Prejudice",
+        "text": "The person who has Pride and Prejudice has 2."
+      },
+      {
+        "type": "positive",
+        "dim1": "fruit",
+        "attr1": "grapefruit",
+        "dim2": "Favorite Superhero",
+        "attr2": "Spider-Man",
+        "text": "The person with grapefruit has Spider-Man."
+      },
+      {
+        "type": "positive",
+        "dim1": "fruit",
+        "attr1": "cranberry",
+        "dim2": "FavoriteBook",
+        "attr2": "1984",
+        "text": "The person with cranberry has 1984."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Superman",
+        "dim2": "FavoriteBook",
+        "attr2": "The Great Gatsby",
+        "text": "The person with Superman has The Great Gatsby."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Albert",
+        "text": "The person with David lives somewhere to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives directly to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "David",
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "orange",
+        "grapefruit",
+        "cranberry",
+        "apple"
+      ],
+      [
+        "Batman",
+        "Spider-Man",
+        "Wonder Woman",
+        "Superman"
+      ],
+      [
+        "Moby Dick",
+        "Pride and Prejudice",
+        "1984",
+        "The Great Gatsby"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4043,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Height",
+      "movie type",
+      "Movie"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "David",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "comedy",
+        "thriller",
+        "action",
+        "horror"
+      ],
+      [
+        "The Godfather",
+        "The Shawshank Redemption",
+        "The Dark Knight",
+        "The Lord of the Rings"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person with 135 has action.",
+      "The person with 130 watches The Godfather.",
+      "The person with thriller enjoys The Lord of the Rings.",
+      "The person with comedy does not watche The Godfather.",
+      "The person with The Dark Knight does not i 130.",
+      "The person with comedy does not i 135.",
+      "The person with Charles lives to the left of the person with David.",
+      "The person with David lives to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 135,
+        "dim2": "movie type",
+        "attr2": "action",
+        "text": "The person with 135 has action."
+      },
+      {
+        "type": "positive",
+        "dim1": "Height",
+        "attr1": 130,
+        "dim2": "Movie",
+        "attr2": "The Godfather",
+        "text": "The person with 130 watches The Godfather."
+      },
+      {
+        "type": "positive",
+        "dim1": "movie type",
+        "attr1": "thriller",
+        "dim2": "Movie",
+        "attr2": "The Lord of the Rings",
+        "text": "The person with thriller enjoys The Lord of the Rings."
+      },
+      {
+        "type": "negative",
+        "dim1": "movie type",
+        "attr1": "comedy",
+        "dim2": "Movie",
+        "attr2": "The Godfather",
+        "text": "The person with comedy does not watche The Godfather."
+      },
+      {
+        "type": "negative",
+        "dim1": "Movie",
+        "attr1": "The Dark Knight",
+        "dim2": "Height",
+        "attr2": 130,
+        "text": "The person with The Dark Knight does not i 130."
+      },
+      {
+        "type": "negative",
+        "dim1": "movie type",
+        "attr1": "comedy",
+        "dim2": "Height",
+        "attr2": 135,
+        "text": "The person with comedy does not i 135."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "David",
+        "text": "The person with Charles lives to the left of the person with David."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "David",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        130,
+        135,
+        140,
+        145
+      ],
+      [
+        "horror",
+        "action",
+        "comedy",
+        "thriller"
+      ],
+      [
+        "The Godfather",
+        "The Dark Knight",
+        "The Shawshank Redemption",
+        "The Lord of the Rings"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4044,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Drink",
+      "MusicGenre",
+      "FavoriteFashionDesigner"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Tea",
+        "Milk",
+        "Coffee"
+      ],
+      [
+        "Pop",
+        "Jazz",
+        "Rock"
+      ],
+      [
+        "Donatella Versace",
+        "Giorgio Armani",
+        "Coco Chanel"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person who enjoys Milk has 22.",
+      "The person who enjoys Rock has 22.",
+      "The person who has 20 has Coco Chanel.",
+      "The person with Tea enjoys Jazz.",
+      "The person with Milk has Donatella Versace.",
+      "The person who has Donatella Versace enjoys Rock.",
+      "The person with Giorgio Armani does not prefer Coffee.",
+      "The person with Coco Chanel does not have 22.",
+      "The person with Charles lives immediately to the left of the person with Bernard.",
+      "The person with Charles lives somewhere to the left of the person with Albert."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "Drink",
+        "attr2": "Milk",
+        "text": "The person who enjoys Milk has 22."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "MusicGenre",
+        "attr2": "Rock",
+        "text": "The person who enjoys Rock has 22."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Coco Chanel",
+        "text": "The person who has 20 has Coco Chanel."
+      },
+      {
+        "type": "positive",
+        "dim1": "Drink",
+        "attr1": "Tea",
+        "dim2": "MusicGenre",
+        "attr2": "Jazz",
+        "text": "The person with Tea enjoys Jazz."
+      },
+      {
+        "type": "positive",
+        "dim1": "Drink",
+        "attr1": "Milk",
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Donatella Versace",
+        "text": "The person with Milk has Donatella Versace."
+      },
+      {
+        "type": "positive",
+        "dim1": "MusicGenre",
+        "attr1": "Rock",
+        "dim2": "FavoriteFashionDesigner",
+        "attr2": "Donatella Versace",
+        "text": "The person who has Donatella Versace enjoys Rock."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteFashionDesigner",
+        "attr1": "Giorgio Armani",
+        "dim2": "Drink",
+        "attr2": "Coffee",
+        "text": "The person with Giorgio Armani does not prefer Coffee."
+      },
+      {
+        "type": "negative",
+        "dim1": "FavoriteFashionDesigner",
+        "attr1": "Coco Chanel",
+        "dim2": "Age",
+        "attr2": 22,
+        "text": "The person with Coco Chanel does not have 22."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives immediately to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives somewhere to the left of the person with Albert."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Coffee",
+        "Tea",
+        "Milk"
+      ],
+      [
+        "Pop",
+        "Jazz",
+        "Rock"
+      ],
+      [
+        "Coco Chanel",
+        "Giorgio Armani",
+        "Donatella Versace"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4045,
+    "num_persons": 3,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Music",
+      "Language"
+    ],
+    "entities": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Hip Hop",
+        "Pop",
+        "Rock"
+      ],
+      [
+        "English",
+        "Mandarin",
+        "Spanish"
+      ]
+    ],
+    "num_clues": 8,
+    "clues": [
+      "The person who enjoys Pop has 20.",
+      "The person with 21 has Spanish.",
+      "The person with Pop has English.",
+      "The person with Rock does not have 22.",
+      "The person with Hip Hop does not have English.",
+      "The person with Rock does not have English.",
+      "The person with Charles lives directly to the left of the person with Albert.",
+      "The person with Albert lives in the position 22 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "Music",
+        "attr2": "Pop",
+        "text": "The person who enjoys Pop has 20."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Language",
+        "attr2": "Spanish",
+        "text": "The person with 21 has Spanish."
+      },
+      {
+        "type": "positive",
+        "dim1": "Music",
+        "attr1": "Pop",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with Pop has English."
+      },
+      {
+        "type": "negative",
+        "dim1": "Music",
+        "attr1": "Rock",
+        "dim2": "Age",
+        "attr2": 22,
+        "text": "The person with Rock does not have 22."
+      },
+      {
+        "type": "negative",
+        "dim1": "Music",
+        "attr1": "Hip Hop",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with Hip Hop does not have English."
+      },
+      {
+        "type": "negative",
+        "dim1": "Music",
+        "attr1": "Rock",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with Rock does not have English."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Charles lives directly to the left of the person with Albert."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Albert",
+        "text": "The person with Albert lives in the position 22 house."
+      }
+    ],
+    "solution": [
+      [
+        "Bernard",
+        "Charles",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22
+      ],
+      [
+        "Pop",
+        "Rock",
+        "Hip Hop"
+      ],
+      [
+        "English",
+        "Spanish",
+        "Mandarin"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4046,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Food",
+      "ShoeTypes",
+      "FavoriteActor"
+    ],
+    "entities": [
+      [
+        "Charles",
+        "David",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Hamburger",
+        "Pasta",
+        "Pizza",
+        "Sushi"
+      ],
+      [
+        "Sandals",
+        "Boots",
+        "Sneakers",
+        "Slippers"
+      ],
+      [
+        "Robert De Niro",
+        "Tom Hanks",
+        "Leonardo DiCaprio",
+        "Morgan Freeman"
+      ]
+    ],
+    "num_clues": 10,
+    "clues": [
+      "The person with 23 prefers Pizza.",
+      "The person with 22 has Slippers.",
+      "The person with 20 admires Morgan Freeman.",
+      "The person with Pizza has Boots.",
+      "The person who admires Morgan Freeman prefers Pasta.",
+      "The person who has Boots admires Robert De Niro.",
+      "The person with Sneakers does not prefer Hamburger.",
+      "The person with 21 does not admire Morgan Freeman.",
+      "The person with Charles lives to the left of the person with Bernard.",
+      "The person with Bernard lives in the position 22 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "Food",
+        "attr2": "Pizza",
+        "text": "The person with 23 prefers Pizza."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "ShoeTypes",
+        "attr2": "Slippers",
+        "text": "The person with 22 has Slippers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 20,
+        "dim2": "FavoriteActor",
+        "attr2": "Morgan Freeman",
+        "text": "The person with 20 admires Morgan Freeman."
+      },
+      {
+        "type": "positive",
+        "dim1": "Food",
+        "attr1": "Pizza",
+        "dim2": "ShoeTypes",
+        "attr2": "Boots",
+        "text": "The person with Pizza has Boots."
+      },
+      {
+        "type": "positive",
+        "dim1": "Food",
+        "attr1": "Pasta",
+        "dim2": "FavoriteActor",
+        "attr2": "Morgan Freeman",
+        "text": "The person who admires Morgan Freeman prefers Pasta."
+      },
+      {
+        "type": "positive",
+        "dim1": "ShoeTypes",
+        "attr1": "Boots",
+        "dim2": "FavoriteActor",
+        "attr2": "Robert De Niro",
+        "text": "The person who has Boots admires Robert De Niro."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "Food",
+        "attr2": "Hamburger",
+        "text": "The person with Sneakers does not prefer Hamburger."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "FavoriteActor",
+        "attr2": "Morgan Freeman",
+        "text": "The person with 21 does not admire Morgan Freeman."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Bernard lives in the position 22 house."
+      }
+    ],
+    "solution": [
+      [
+        "Charles",
+        "David",
+        "Bernard",
+        "Albert"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Pasta",
+        "Sushi",
+        "Hamburger",
+        "Pizza"
+      ],
+      [
+        "Sneakers",
+        "Sandals",
+        "Slippers",
+        "Boots"
+      ],
+      [
+        "Morgan Freeman",
+        "Leonardo DiCaprio",
+        "Tom Hanks",
+        "Robert De Niro"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4047,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "Favorite Superhero",
+      "Holiday",
+      "Movie",
+      "Language"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Superman",
+        "Batman",
+        "Spider-Man",
+        "Wonder Woman"
+      ],
+      [
+        "Thanksgiving",
+        "Halloween",
+        "Christmas",
+        "New Year's Eve"
+      ],
+      [
+        "The Dark Knight",
+        "The Lord of the Rings",
+        "The Godfather",
+        "The Shawshank Redemption"
+      ],
+      [
+        "Mandarin",
+        "French",
+        "English",
+        "Spanish"
+      ]
+    ],
+    "num_clues": 12,
+    "clues": [
+      "The person with 21 has Wonder Woman.",
+      "The person with 21 has Thanksgiving.",
+      "The person with 23 watches The Lord of the Rings.",
+      "The person who has French has 23.",
+      "The person who has Thanksgiving has Wonder Woman.",
+      "The person with Spider-Man enjoys The Dark Knight.",
+      "The person with Batman has English.",
+      "The person with Thanksgiving enjoys The Shawshank Redemption.",
+      "The person with 21 does not have Spider-Man.",
+      "The person with The Godfather does not have Superman.",
+      "The person with Charles lives somewhere to the left of the person with Bernard.",
+      "The person with Albert lives in the position 20 house."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Favorite Superhero",
+        "attr2": "Wonder Woman",
+        "text": "The person with 21 has Wonder Woman."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with 21 has Thanksgiving."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "Movie",
+        "attr2": "The Lord of the Rings",
+        "text": "The person with 23 watches The Lord of the Rings."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "Language",
+        "attr2": "French",
+        "text": "The person who has French has 23."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Wonder Woman",
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person who has Thanksgiving has Wonder Woman."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Spider-Man",
+        "dim2": "Movie",
+        "attr2": "The Dark Knight",
+        "text": "The person with Spider-Man enjoys The Dark Knight."
+      },
+      {
+        "type": "positive",
+        "dim1": "Favorite Superhero",
+        "attr1": "Batman",
+        "dim2": "Language",
+        "attr2": "English",
+        "text": "The person with Batman has English."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "Movie",
+        "attr2": "The Shawshank Redemption",
+        "text": "The person with Thanksgiving enjoys The Shawshank Redemption."
+      },
+      {
+        "type": "negative",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "Favorite Superhero",
+        "attr2": "Spider-Man",
+        "text": "The person with 21 does not have Spider-Man."
+      },
+      {
+        "type": "negative",
+        "dim1": "Movie",
+        "attr1": "The Godfather",
+        "dim2": "Favorite Superhero",
+        "attr2": "Superman",
+        "text": "The person with The Godfather does not have Superman."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "David",
+        "text": "The person with Albert lives in the position 20 house."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "Charles",
+        "David",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Spider-Man",
+        "Wonder Woman",
+        "Batman",
+        "Superman"
+      ],
+      [
+        "Halloween",
+        "Thanksgiving",
+        "Christmas",
+        "New Year's Eve"
+      ],
+      [
+        "The Dark Knight",
+        "The Shawshank Redemption",
+        "The Godfather",
+        "The Lord of the Rings"
+      ],
+      [
+        "Spanish",
+        "Mandarin",
+        "English",
+        "French"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4048,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "Age",
+      "VideoGame",
+      "Travel Destination",
+      "FavoriteActor"
+    ],
+    "entities": [
+      [
+        "Albert",
+        "David",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Call of Duty",
+        "Minecraft",
+        "Grand Theft Auto V",
+        "Fortnite"
+      ],
+      [
+        "New York",
+        "London",
+        "Tokyo",
+        "Paris"
+      ],
+      [
+        "Robert De Niro",
+        "Morgan Freeman",
+        "Leonardo DiCaprio",
+        "Tom Hanks"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 21 has Fortnite.",
+      "The person who has London has 23.",
+      "The person with 22 likes Robert De Niro.",
+      "The person with Grand Theft Auto V has New York.",
+      "The person with Fortnite admires Leonardo DiCaprio.",
+      "The person with Paris admires Morgan Freeman.",
+      "The person with Call of Duty does not have London.",
+      "The person with Minecraft does not have 21.",
+      "The person with Grand Theft Auto V does not have Tokyo.",
+      "The person with David lives somewhere to the left of the person with Bernard.",
+      "The person with Albert lives to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 21,
+        "dim2": "VideoGame",
+        "attr2": "Fortnite",
+        "text": "The person with 21 has Fortnite."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 23,
+        "dim2": "Travel Destination",
+        "attr2": "London",
+        "text": "The person who has London has 23."
+      },
+      {
+        "type": "positive",
+        "dim1": "Age",
+        "attr1": 22,
+        "dim2": "FavoriteActor",
+        "attr2": "Robert De Niro",
+        "text": "The person with 22 likes Robert De Niro."
+      },
+      {
+        "type": "positive",
+        "dim1": "VideoGame",
+        "attr1": "Grand Theft Auto V",
+        "dim2": "Travel Destination",
+        "attr2": "New York",
+        "text": "The person with Grand Theft Auto V has New York."
+      },
+      {
+        "type": "positive",
+        "dim1": "VideoGame",
+        "attr1": "Fortnite",
+        "dim2": "FavoriteActor",
+        "attr2": "Leonardo DiCaprio",
+        "text": "The person with Fortnite admires Leonardo DiCaprio."
+      },
+      {
+        "type": "positive",
+        "dim1": "Travel Destination",
+        "attr1": "Paris",
+        "dim2": "FavoriteActor",
+        "attr2": "Morgan Freeman",
+        "text": "The person with Paris admires Morgan Freeman."
+      },
+      {
+        "type": "negative",
+        "dim1": "VideoGame",
+        "attr1": "Call of Duty",
+        "dim2": "Travel Destination",
+        "attr2": "London",
+        "text": "The person with Call of Duty does not have London."
+      },
+      {
+        "type": "negative",
+        "dim1": "VideoGame",
+        "attr1": "Minecraft",
+        "dim2": "Age",
+        "attr2": 21,
+        "text": "The person with Minecraft does not have 21."
+      },
+      {
+        "type": "negative",
+        "dim1": "VideoGame",
+        "attr1": "Grand Theft Auto V",
+        "dim2": "Travel Destination",
+        "attr2": "Tokyo",
+        "text": "The person with Grand Theft Auto V does not have Tokyo."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "David",
+        "attr2": "Bernard",
+        "text": "The person with David lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Albert",
+        "attr2": "Bernard",
+        "text": "The person with Albert lives to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "Albert",
+        "David",
+        "Charles",
+        "Bernard"
+      ],
+      [
+        20,
+        21,
+        22,
+        23
+      ],
+      [
+        "Call of Duty",
+        "Fortnite",
+        "Grand Theft Auto V",
+        "Minecraft"
+      ],
+      [
+        "Paris",
+        "Tokyo",
+        "New York",
+        "London"
+      ],
+      [
+        "Morgan Freeman",
+        "Leonardo DiCaprio",
+        "Robert De Niro",
+        "Tom Hanks"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  },
+  {
+    "puzzle_id": 4049,
+    "num_persons": 4,
+    "dimensions": [
+      "Name",
+      "LinePosition",
+      "Holiday",
+      "Profession",
+      "ShoeTypes"
+    ],
+    "entities": [
+      [
+        "David",
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "New Year's Eve",
+        "Halloween",
+        "Thanksgiving",
+        "Christmas"
+      ],
+      [
+        "Lawyer",
+        "Doctor",
+        "Teacher",
+        "Engineer"
+      ],
+      [
+        "Boots",
+        "Slippers",
+        "Sandals",
+        "Sneakers"
+      ]
+    ],
+    "num_clues": 11,
+    "clues": [
+      "The person with 1 has Thanksgiving.",
+      "The person with 1 has Engineer.",
+      "The person with 1 has Sneakers.",
+      "The person who has Thanksgiving has Engineer.",
+      "The person who has Christmas has Slippers.",
+      "The person who has Slippers has Doctor.",
+      "The person with 4 does not have Halloween.",
+      "The person with Sneakers does not have 3.",
+      "The person with 2 does not have Thanksgiving.",
+      "The person with Charles lives somewhere to the left of the person with Bernard.",
+      "The person with Charles lives somewhere to the left of the person with Bernard."
+    ],
+    "clues_data": [
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with 1 has Thanksgiving."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "Profession",
+        "attr2": "Engineer",
+        "text": "The person with 1 has Engineer."
+      },
+      {
+        "type": "positive",
+        "dim1": "LinePosition",
+        "attr1": 1,
+        "dim2": "ShoeTypes",
+        "attr2": "Sneakers",
+        "text": "The person with 1 has Sneakers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "Thanksgiving",
+        "dim2": "Profession",
+        "attr2": "Engineer",
+        "text": "The person who has Thanksgiving has Engineer."
+      },
+      {
+        "type": "positive",
+        "dim1": "Holiday",
+        "attr1": "Christmas",
+        "dim2": "ShoeTypes",
+        "attr2": "Slippers",
+        "text": "The person who has Christmas has Slippers."
+      },
+      {
+        "type": "positive",
+        "dim1": "Profession",
+        "attr1": "Doctor",
+        "dim2": "ShoeTypes",
+        "attr2": "Slippers",
+        "text": "The person who has Slippers has Doctor."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 4,
+        "dim2": "Holiday",
+        "attr2": "Halloween",
+        "text": "The person with 4 does not have Halloween."
+      },
+      {
+        "type": "negative",
+        "dim1": "ShoeTypes",
+        "attr1": "Sneakers",
+        "dim2": "LinePosition",
+        "attr2": 3,
+        "text": "The person with Sneakers does not have 3."
+      },
+      {
+        "type": "negative",
+        "dim1": "LinePosition",
+        "attr1": 2,
+        "dim2": "Holiday",
+        "attr2": "Thanksgiving",
+        "text": "The person with 2 does not have Thanksgiving."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      },
+      {
+        "type": "positional",
+        "direction": "left",
+        "attr1": "Charles",
+        "attr2": "Bernard",
+        "text": "The person with Charles lives somewhere to the left of the person with Bernard."
+      }
+    ],
+    "solution": [
+      [
+        "David",
+        "Charles",
+        "Albert",
+        "Bernard"
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        "Thanksgiving",
+        "Christmas",
+        "Halloween",
+        "New Year's Eve"
+      ],
+      [
+        "Engineer",
+        "Doctor",
+        "Teacher",
+        "Lawyer"
+      ],
+      [
+        "Sneakers",
+        "Slippers",
+        "Sandals",
+        "Boots"
+      ]
+    ],
+    "generation_success": true,
+    "clue_style": "natural"
+  }
+]
