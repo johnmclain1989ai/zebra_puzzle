@@ -1,4 +1,4 @@
-# Zebra Puzzle Datasets
+# Zebra Puzzle Generation Code
 ---
 
 ## ⭐ New: Natural Language Clues
