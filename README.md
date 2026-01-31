@@ -1,7 +1,4 @@
 # Zebra Puzzle Datasets
-
-**249 unique zebra puzzles with gold standard solutions**
-
 ---
 
 ## ⭐ New: Natural Language Clues
