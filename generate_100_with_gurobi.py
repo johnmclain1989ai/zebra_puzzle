@@ -85,16 +85,18 @@ def add_constraint_to_model_FIXED(m, var, matrix, dim_names, var_name_lst, const
         _, c, r, r1, sign = constraint
         if sign == 'positive':
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"also has dimension {dim_names[r1]}={var_name_lst[r1][c]}"
+                zebra_abs_pro.format_nonpositional_clue(
+                    dim_names, var_name_lst, r, c, r1, c, 'positive'
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] == var[p][r1][c])
         else:
             c1 = random.choice([i for i in range(len(matrix[0])) if i != c])
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"do not has dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+                zebra_abs_pro.format_nonpositional_clue(
+                    dim_names, var_name_lst, r, c, r1, c1, 'negative'
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] + var[p][r1][c1] <= 1)
