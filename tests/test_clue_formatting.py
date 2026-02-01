@@ -1,23 +1,33 @@
+import generate_100_with_gurobi
 import zebra_abs_pro
 
 
-def test_format_nonpositional_clue_negative_uses_does_not_have():
-    dim_names = ["Name", "Color"]
-    var_name_lst = [["Alice", "Bob"], ["Red", "Blue"]]
-
-    clue = zebra_abs_pro.format_nonpositional_clue(
-        dim_names, var_name_lst, r=0, c=0, r1=1, c1=1, sign="negative"
+def test_format_clue_positional():
+    text = zebra_abs_pro.format_clue(
+        "PositionalTwo", "Color", "Blue", "Pet", "Cat"
     )
+    assert text.startswith("From left to right,")
+    assert "person with Color Blue" in text
+    assert "person with Pet Cat" in text
+    assert text.endswith(".")
 
-    assert clue == "The person with dimension Name=Alice does not have dimension Color=Blue"
 
-
-def test_format_nonpositional_clue_positive_consistent_phrase():
-    dim_names = ["Name", "Pet"]
-    var_name_lst = [["Alice", "Bob"], ["Cat", "Dog"]]
-
-    clue = zebra_abs_pro.format_nonpositional_clue(
-        dim_names, var_name_lst, r=0, c=1, r1=1, c1=0, sign="positive"
+def test_format_clue_nonpositional_positive():
+    text = zebra_abs_pro.format_clue(
+        "NonPositional", "Color", "Blue", "Pet", "Cat", sign="positive"
     )
+    assert text == "The person with Color Blue also has Pet Cat."
 
-    assert clue == "The person with dimension Name=Bob also has dimension Pet=Cat"
+
+def test_format_clue_nonpositional_negative():
+    text = zebra_abs_pro.format_clue(
+        "NonPositional", "Color", "Blue", "Pet", "Cat", sign="negative"
+    )
+    assert text == "The person with Color Blue does not have Pet Cat."
+
+
+def test_generate_module_format_clue_matches_base():
+    text = generate_100_with_gurobi.format_clue(
+        "NonPositional", "Color", "Blue", "Pet", "Cat", sign="positive"
+    )
+    assert text == "The person with Color Blue also has Pet Cat."
