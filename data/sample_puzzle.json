@@ -1,0 +1,78 @@
+{
+  "puzzle_id": 9999,
+  "num_persons": 3,
+  "dimensions": [
+    "Name",
+    "Height",
+    "ShoeTypes",
+    "YouTubeChannel",
+    "movie type"
+  ],
+  "entities": [
+    [
+      "William",
+      "Isaac",
+      "Xavier"
+    ],
+    [
+      180,
+      165,
+      175
+    ],
+    [
+      "Peep Toes",
+      "Cowboy Boots",
+      "Boat Shoes"
+    ],
+    [
+      "Jenna Marbles",
+      "Philip DeFranco",
+      "The Try Guys"
+    ],
+    [
+      "comedy",
+      "fantasy",
+      "drama"
+    ]
+  ],
+  "num_clues": 9,
+  "clues": [
+    "The person with Height 180 also has ShoeTypes Peep Toes.",
+    "The person with Height 180 also has ShoeTypes Peep Toes.",
+    "The person with movie type drama also has Name Xavier.",
+    "The person with ShoeTypes Cowboy Boots also has Name Isaac.",
+    "The person with ShoeTypes Peep Toes also has Height 180.",
+    "The person with YouTubeChannel Jenna Marbles also has Height 180.",
+    "The person with Height 165 also has YouTubeChannel Philip DeFranco.",
+    "The person with movie type fantasy also has YouTubeChannel Philip DeFranco.",
+    "The person with Height 180 also has movie type comedy."
+  ],
+  "solution": [
+    [
+      "Person_0",
+      "Person_1",
+      "Person_2"
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      2,
+      0
+    ],
+    [
+      2,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      2
+    ]
+  ],
+  "generation_success": true
+}

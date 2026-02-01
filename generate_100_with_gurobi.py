@@ -11,6 +11,7 @@ import json
 import random
 import traceback
 from datetime import datetime
+from gurobipy import quicksum
 
 # Setup paths - add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -180,7 +181,7 @@ def generate_single_puzzle_FIXED(seed=None):
         }
 
 
-def generate_100_puzzles_with_gurobi(num_puzzles=100, output_file="zebra_puzzles_gurobi_100.json"):
+def generate_100_puzzles_with_gurobi(num_puzzles=100, output_file="data/generated/zebra_puzzles_gurobi_100.json"):
     """Generate puzzles using Gurobi with FIXED constraints."""
     print("=" * 70)
     print(f"GENERATING {num_puzzles} ZEBRA PUZZLES WITH GUROBI (FIXED)")

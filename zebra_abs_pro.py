@@ -8,8 +8,8 @@ from prompt_formatting import build_entities, format_setup_string
 
 # -------------------------------------------------------------------------------
 # Constants or configuration can go here
-ATTRIBUTE_ENTITY_FILE = 'attribute_entity.json'
-NUMBERED_ENTITY_FILE = 'numbered_entity.json'
+ATTRIBUTE_ENTITY_FILE = 'data/attribute_entity.json'
+NUMBERED_ENTITY_FILE = 'data/numbered_entity.json'
 # -------------------------------------------------------------------------------
 
 

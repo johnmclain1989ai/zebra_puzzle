@@ -93,6 +93,46 @@ python generate_100_with_gurobi.py
 
 ---
 
+## 🧪 Testing LLMs on Puzzles
+
+### Quick Start
+
+Test a single puzzle:
+```bash
+python example_llm_test.py
+```
+
+Test multiple puzzles:
+```bash
+# Test first 10 puzzles
+python test_llm_on_puzzles.py --num 10
+
+# Test all puzzles
+python test_llm_on_puzzles.py
+```
+
+### Programmatic Usage
+
+```python
+from test_llm_on_puzzles import test_single_puzzle
+import json
+
+# Load and test a puzzle
+with open('zebra_puzzles_gurobi_100.json', 'r') as f:
+    puzzles = json.load(f)
+
+result = test_single_puzzle(puzzles[0], verbose=True)
+
+if result['success'] and result['evaluation']['correct']:
+    print("✓ LLM solved the puzzle!")
+else:
+    print("✗ LLM failed")
+```
+
+See [LLM_TESTING_GUIDE.md](LLM_TESTING_GUIDE.md) for detailed documentation.
+
+---
+
 ## 🎓 Example: Evaluating LLM Performance
 
 ```python

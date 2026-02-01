@@ -1,0 +1,115 @@
+{
+  "puzzle_id": 8000,
+  "num_persons": 4,
+  "dimensions": [
+    "Name",
+    "House Num",
+    "Music",
+    "FurnitureType",
+    "City",
+    "FavoriteBook"
+  ],
+  "entities": [
+    [
+      "Thomas",
+      "Michael",
+      "Charles",
+      "William"
+    ],
+    [
+      6,
+      3,
+      8,
+      10
+    ],
+    [
+      "World",
+      "Downtempo",
+      "Calypso",
+      "Reggae"
+    ],
+    [
+      "Nightstand",
+      "Sideboard",
+      "Coffee Table",
+      "Bench"
+    ],
+    [
+      "Chicago",
+      "Rome",
+      "Tokyo",
+      "New York"
+    ],
+    [
+      "Brave New World",
+      "The Alchemist",
+      "To Kill a Mockingbird",
+      "The Hunger Games"
+    ]
+  ],
+  "num_clues": 23,
+  "clues": [
+    "The person with House Num 6 also has Name Thomas.",
+    "The person with House Num 8 also has Music Calypso.",
+    "The person with House Num 3 also has Name Michael.",
+    "The person with FavoriteBook To Kill a Mockingbird also has Music Calypso.",
+    "The person with House Num 10 also has Music Reggae.",
+    "The person with Music World also has City Chicago.",
+    "The person with FurnitureType Bench also has Music Reggae.",
+    "The person with FavoriteBook The Hunger Games also has House Num 10.",
+    "The person with Name Thomas also has Music World.",
+    "The person with FavoriteBook Brave New World also has FurnitureType Nightstand.",
+    "The person with Name Thomas also has City Chicago.",
+    "The person with Music World also has FavoriteBook Brave New World.",
+    "The person with FavoriteBook The Hunger Games does not have House Num 8.",
+    "The person with City Rome also has Music Downtempo.",
+    "The person with City New York also has Name William.",
+    "The person with Music Reggae also has City New York.",
+    "The person with House Num 10 also has Name William.",
+    "The person with FavoriteBook The Hunger Games also has FurnitureType Bench.",
+    "The person with City New York also has FavoriteBook The Hunger Games.",
+    "The person with FavoriteBook The Alchemist does not have House Num 10.",
+    "The person with Music Reggae does not have FavoriteBook The Alchemist.",
+    "The person with Name Thomas also has Music World.",
+    "The person with City Rome also has FurnitureType Sideboard."
+  ],
+  "solution": [
+    [
+      "Person_0",
+      "Person_1",
+      "Person_2",
+      "Person_3"
+    ],
+    [
+      3,
+      1,
+      2,
+      0
+    ],
+    [
+      3,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      3,
+      2,
+      0
+    ],
+    [
+      3,
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      3,
+      0
+    ]
+  ],
+  "generation_success": true
+}

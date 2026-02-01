@@ -1,0 +1,305 @@
+{
+  "test_date": "2026-02-01T12:14:05.571165",
+  "puzzles_file": "zebra_puzzles_gurobi_100.json",
+  "num_puzzles": 5,
+  "correct_count": 0,
+  "success_rate": 0.0,
+  "average_accuracy": 0.34,
+  "detailed_results": [
+    {
+      "puzzle_id": 3000,
+      "prompt": "# Zebra Puzzle\n## Puzzle Setup\nThere are 3 persons, each with different attributes.\n\nThe dimensions and possible values are:\n- **Name**: Ulysses, Isaac, Albert\n- **LinePosition**: 1, 5, 3\n- **Interested HistoricalEvent**: Titanic Sinking, Vietnam War, The Black Death\n- **Phone Brand**: BQ, ZUK, Vivo\n- **FavoriteActor**: Daniel Day-Lewis, George Clooney, Tom Hanks\n\n## Clues\nUse the following 13 clues to determine the complete assignment:\n\n1. The person with FavoriteActor Daniel Day-Lewis also has Phone Brand BQ.\n2. The person with Phone Brand ZUK also has Interested HistoricalEvent Vietnam War.\n3. The person with LinePosition 3 does not have FavoriteActor George Clooney.\n4. The person with Interested HistoricalEvent Titanic Sinking also has Phone Brand BQ.\n5. The person with Name Ulysses also has Phone Brand BQ.\n6. The person with FavoriteActor Daniel Day-Lewis also has Interested HistoricalEvent Titanic Sinking.\n7. The person with Phone Brand ZUK does not have FavoriteActor Tom Hanks.\n8. The person with LinePosition 3 also has Name Albert.\n9. The person with FavoriteActor George Clooney also has Phone Brand ZUK.\n10. The person with Phone Brand Vivo also has Name Albert.\n11. The person with Interested HistoricalEvent Vietnam War also has FavoriteActor George Clooney.\n12. The person with Interested HistoricalEvent Vietnam War also has Phone Brand ZUK.\n13. The person with FavoriteActor Daniel Day-Lewis also has LinePosition 1.\n\n## Question\nBased on the clues above, determine the complete solution.\nFor each dimension, provide the sequence of values corresponding to each person.\n\n## Output Format\nPlease provide your answer in the following format:\n\nName: [value1, value2, ...]\nLinePosition: [value1, value2, ...]\nInterested HistoricalEvent: [value1, value2, ...]\nPhone Brand: [value1, value2, ...]\nFavoriteActor: [value1, value2, ...]\n\nProvide ONLY the solution in this exact format, no additional explanation.\n",
+      "response": "Name: [Ulysses, Isaac, Albert]\nLinePosition: [1, 5, 3]\nInterested HistoricalEvent: [Titanic Sinking, The Black Death, Vietnam War]\nPhone Brand: [BQ, Vivo, ZUK]\nFavoriteActor: [Daniel Day-Lewis, Tom Hanks, George Clooney]",
+      "parsed_solution": {
+        "Name": [
+          "Ulysses",
+          "Isaac",
+          "Albert"
+        ],
+        "LinePosition": [
+          "1",
+          "5",
+          "3"
+        ],
+        "Interested HistoricalEvent": [
+          "Titanic Sinking",
+          "The Black Death",
+          "Vietnam War"
+        ],
+        "Phone Brand": [
+          "BQ",
+          "Vivo",
+          "ZUK"
+        ],
+        "FavoriteActor": [
+          "Daniel Day-Lewis",
+          "Tom Hanks",
+          "George Clooney"
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "dimensions_correct": {
+          "Name": true,
+          "LinePosition": false,
+          "Interested HistoricalEvent": true,
+          "Phone Brand": false,
+          "FavoriteActor": false
+        },
+        "num_correct_dimensions": 2,
+        "total_dimensions": 5,
+        "accuracy": 0.4,
+        "errors": [
+          "LinePosition: Incorrect values (predicted ['1', '5', '3'], expected ['3', '1', '5'])",
+          "Phone Brand: Incorrect values (predicted ['BQ', 'Vivo', 'ZUK'], expected ['Vivo', 'ZUK', 'BQ'])",
+          "FavoriteActor: Incorrect values (predicted ['Daniel Day-Lewis', 'Tom Hanks', 'George Clooney'], expected ['Tom Hanks', 'Daniel Day-Lewis', 'George Clooney'])"
+        ]
+      },
+      "success": true
+    },
+    {
+      "puzzle_id": 3001,
+      "prompt": "# Zebra Puzzle\n## Puzzle Setup\nThere are 4 persons, each with different attributes.\n\nThe dimensions and possible values are:\n- **Name**: Bernard, Steven, George, Xavier\n- **Height**: 130, 145, 175, 135\n- **ShoeTypes**: Sneakers, Plain Toe Shoes, Wingtip Shoes, Brogue Shoes\n- **FavoriteBook**: Moby Dick, The Da Vinci Code, Crime and Punishment, Harry Potter and the Sorcerer's Stone\n- **Sport**: Windsurfing, Archery, Badminton, Kayaking\n- **FavoriteFashionDesigner**: Gianni Versace, Gucci, Marc Jacobs, Diane von Furstenberg\n\n## Clues\nUse the following 20 clues to determine the complete assignment:\n\n1. The person with Name Xavier also has FavoriteBook Harry Potter and the Sorcerer's Stone.\n2. The person with Height 130 also has FavoriteBook Moby Dick.\n3. The person with Sport Windsurfing also has FavoriteFashionDesigner Gianni Versace.\n4. The person with Name Bernard does not have Height 145.\n5. The person with FavoriteFashionDesigner Gucci also has Sport Archery.\n6. The person with FavoriteFashionDesigner Gianni Versace also has ShoeTypes Sneakers.\n7. The person with Sport Kayaking also has Height 135.\n8. The person with Sport Kayaking also has ShoeTypes Brogue Shoes.\n9. The person with Name Steven also has FavoriteFashionDesigner Gucci.\n10. The person with FavoriteFashionDesigner Gucci also has Sport Archery.\n11. The person with Sport Windsurfing does not have FavoriteBook Harry Potter and the Sorcerer's Stone.\n12. The person with Height 130 does not have Name Xavier.\n13. The person with FavoriteBook The Da Vinci Code also has ShoeTypes Plain Toe Shoes.\n14. The person with Height 175 also has Sport Badminton.\n15. The person with Name George also has Height 175.\n16. The person with Name Xavier also has Height 135.\n17. The person with ShoeTypes Wingtip Shoes also has Height 175.\n18. The person with ShoeTypes Brogue Shoes also has Height 135.\n19. The person with Sport Kayaking also has Height 135.\n20. The person with FavoriteFashionDesigner Marc Jacobs also has FavoriteBook Crime and Punishment.\n\n## Question\nBased on the clues above, determine the complete solution.\nFor each dimension, provide the sequence of values corresponding to each person.\n\n## Output Format\nPlease provide your answer in the following format:\n\nName: [value1, value2, ...]\nHeight: [value1, value2, ...]\nShoeTypes: [value1, value2, ...]\nFavoriteBook: [value1, value2, ...]\nSport: [value1, value2, ...]\nFavoriteFashionDesigner: [value1, value2, ...]\n\nProvide ONLY the solution in this exact format, no additional explanation.\n",
+      "response": "Name: [Bernard, Steven, George, Xavier]\nHeight: [130, 145, 175, 135]\nShoeTypes: [Plain Toe Shoes, Wingtip Shoes, Sneakers, Brogue Shoes]\nFavoriteBook: [Moby Dick, Crime and Punishment, The Da Vinci Code, Harry Potter and the Sorcerer's Stone]\nSport: [Kayaking, Archery, Badminton, Windsurfing]\nFavoriteFashionDesigner: [Marc Jacobs, Gucci, Diane von Furstenberg, Gianni Versace]",
+      "parsed_solution": {
+        "Name": [
+          "Bernard",
+          "Steven",
+          "George",
+          "Xavier"
+        ],
+        "Height": [
+          "130",
+          "145",
+          "175",
+          "135"
+        ],
+        "ShoeTypes": [
+          "Plain Toe Shoes",
+          "Wingtip Shoes",
+          "Sneakers",
+          "Brogue Shoes"
+        ],
+        "FavoriteBook": [
+          "Moby Dick",
+          "Crime and Punishment",
+          "The Da Vinci Code",
+          "Harry Potter and the Sorcerer's Stone"
+        ],
+        "Sport": [
+          "Kayaking",
+          "Archery",
+          "Badminton",
+          "Windsurfing"
+        ],
+        "FavoriteFashionDesigner": [
+          "Marc Jacobs",
+          "Gucci",
+          "Diane von Furstenberg",
+          "Gianni Versace"
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "dimensions_correct": {
+          "Name": true,
+          "Height": false,
+          "ShoeTypes": false,
+          "FavoriteBook": false,
+          "Sport": false,
+          "FavoriteFashionDesigner": false
+        },
+        "num_correct_dimensions": 1,
+        "total_dimensions": 6,
+        "accuracy": 0.16666666666666666,
+        "errors": [
+          "Height: Incorrect values (predicted ['130', '145', '175', '135'], expected ['175', '145', '130', '135'])",
+          "ShoeTypes: Incorrect values (predicted ['Plain Toe Shoes', 'Wingtip Shoes', 'Sneakers', 'Brogue Shoes'], expected ['Sneakers', 'Wingtip Shoes', 'Brogue Shoes', 'Plain Toe Shoes'])",
+          "FavoriteBook: Incorrect values (predicted ['Moby Dick', 'Crime and Punishment', 'The Da Vinci Code', \"Harry Potter and the Sorcerer's Stone\"], expected ['Moby Dick', \"Harry Potter and the Sorcerer's Stone\", 'The Da Vinci Code', 'Crime and Punishment'])",
+          "Sport: Incorrect values (predicted ['Kayaking', 'Archery', 'Badminton', 'Windsurfing'], expected ['Windsurfing', 'Archery', 'Badminton', 'Kayaking'])",
+          "FavoriteFashionDesigner: Incorrect values (predicted ['Marc Jacobs', 'Gucci', 'Diane von Furstenberg', 'Gianni Versace'], expected ['Diane von Furstenberg', 'Marc Jacobs', 'Gianni Versace', 'Gucci'])"
+        ]
+      },
+      "success": true
+    },
+    {
+      "puzzle_id": 3002,
+      "prompt": "# Zebra Puzzle\n## Puzzle Setup\nThere are 3 persons, each with different attributes.\n\nThe dimensions and possible values are:\n- **Name**: Robert, Ulysses, William\n- **House Num**: 2, 3, 10\n- **Food**: Burrito, Hamburger, Whiskey\n- **FavoriteFestival**: Bonnaroo, Glastonbury, Just for Laughs\n- **VideoGame**: Cyberpunk 2077, Dota 2, The Witcher 3: Wild Hunt\n\n## Clues\nUse the following 12 clues to determine the complete assignment:\n\n1. The person with VideoGame Dota 2 also has House Num 3.\n2. The person with House Num 2 also has VideoGame Cyberpunk 2077.\n3. The person with Name Ulysses also has House Num 3.\n4. The person with VideoGame Dota 2 also has FavoriteFestival Glastonbury.\n5. The person with House Num 10 does not have FavoriteFestival Bonnaroo.\n6. The person with Food Whiskey also has Name William.\n7. The person with FavoriteFestival Just for Laughs also has Food Whiskey.\n8. The person with FavoriteFestival Glastonbury also has VideoGame Dota 2.\n9. The person with Name Ulysses also has House Num 3.\n10. The person with FavoriteFestival Bonnaroo also has House Num 2.\n11. The person with Name William also has FavoriteFestival Just for Laughs.\n12. The person with Food Hamburger does not have FavoriteFestival Bonnaroo.\n\n## Question\nBased on the clues above, determine the complete solution.\nFor each dimension, provide the sequence of values corresponding to each person.\n\n## Output Format\nPlease provide your answer in the following format:\n\nName: [value1, value2, ...]\nHouse Num: [value1, value2, ...]\nFood: [value1, value2, ...]\nFavoriteFestival: [value1, value2, ...]\nVideoGame: [value1, value2, ...]\n\nProvide ONLY the solution in this exact format, no additional explanation.\n",
+      "response": "Name: [Robert, Ulysses, William]\nHouse Num: [2, 3, 10]\nFood: [Hamburger, Burrito, Whiskey]\nFavoriteFestival: [Bonnaroo, Glastonbury, Just for Laughs]\nVideoGame: [Cyberpunk 2077, Dota 2, The Witcher 3: Wild Hunt]",
+      "parsed_solution": {
+        "Name": [
+          "Robert",
+          "Ulysses",
+          "William"
+        ],
+        "House Num": [
+          "2",
+          "3",
+          "10"
+        ],
+        "Food": [
+          "Hamburger",
+          "Burrito",
+          "Whiskey"
+        ],
+        "FavoriteFestival": [
+          "Bonnaroo",
+          "Glastonbury",
+          "Just for Laughs"
+        ],
+        "VideoGame": [
+          "Cyberpunk 2077",
+          "Dota 2",
+          "The Witcher 3: Wild Hunt"
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "dimensions_correct": {
+          "Name": true,
+          "House Num": true,
+          "Food": false,
+          "FavoriteFestival": true,
+          "VideoGame": true
+        },
+        "num_correct_dimensions": 4,
+        "total_dimensions": 5,
+        "accuracy": 0.8,
+        "errors": [
+          "Food: Incorrect values (predicted ['Hamburger', 'Burrito', 'Whiskey'], expected ['Hamburger', 'Whiskey', 'Burrito'])"
+        ]
+      },
+      "success": true
+    },
+    {
+      "puzzle_id": 3003,
+      "prompt": "# Zebra Puzzle\n## Puzzle Setup\nThere are 4 persons, each with different attributes.\n\nThe dimensions and possible values are:\n- **Name**: Victor, Frank, Ulysses, George\n- **Height**: 185, 150, 165, 190\n- **Movie**: Beverly Hills Cop, The Lord of the Rings: The Return of the King, The Lion King, Ghostbusters\n- **Drink**: Ouzo, Gin, Soju, Absinthe\n- **MusicGenre**: Jazz, Folk, R&B, Classical\n- **Favorite Subject**: History, Political Science, Chemistry, Environmental Science\n\n## Clues\nUse the following 18 clues to determine the complete assignment:\n\n1. The person with Height 165 also has MusicGenre R&B.\n2. The person with Drink Ouzo also has Height 185.\n3. The person with Movie The Lord of the Rings: The Return of the King also has Height 150.\n4. The person with MusicGenre Jazz also has Movie Beverly Hills Cop.\n5. The person with Favorite Subject Chemistry also has Drink Soju.\n6. The person with Name George also has MusicGenre Classical.\n7. The person with Favorite Subject Environmental Science also has Height 190.\n8. The person with Height 190 also has Favorite Subject Environmental Science.\n9. The person with Height 190 also has MusicGenre Classical.\n10. The person with Favorite Subject Environmental Science also has MusicGenre Classical.\n11. The person with Name Victor also has Height 185.\n12. The person with Movie The Lord of the Rings: The Return of the King also has Name Frank.\n13. The person with Height 185 also has Drink Ouzo.\n14. The person with Movie The Lion King also has Name Ulysses.\n15. The person with Name Frank also has Drink Gin.\n16. The person with Drink Gin also has Height 150.\n17. The person with Favorite Subject Environmental Science also has Movie Ghostbusters.\n18. The person with Favorite Subject Political Science also has Name Frank.\n\n## Question\nBased on the clues above, determine the complete solution.\nFor each dimension, provide the sequence of values corresponding to each person.\n\n## Output Format\nPlease provide your answer in the following format:\n\nName: [value1, value2, ...]\nHeight: [value1, value2, ...]\nMovie: [value1, value2, ...]\nDrink: [value1, value2, ...]\nMusicGenre: [value1, value2, ...]\nFavorite Subject: [value1, value2, ...]\n\nProvide ONLY the solution in this exact format, no additional explanation.\n",
+      "response": "Name: [Victor, Frank, Ulysses, George]\nHeight: [185, 150, 165, 190]\nMovie: [Beverly Hills Cop, The Lord of the Rings: The Return of the King, The Lion King, Ghostbusters]\nDrink: [Ouzo, Gin, Soju, Absinthe]\nMusicGenre: [Jazz, Folk, R&B, Classical]\nFavorite Subject: [History, Political Science, Chemistry, Environmental Science]",
+      "parsed_solution": {
+        "Name": [
+          "Victor",
+          "Frank",
+          "Ulysses",
+          "George"
+        ],
+        "Height": [
+          "185",
+          "150",
+          "165",
+          "190"
+        ],
+        "Movie": [
+          "Beverly Hills Cop",
+          "The Lord of the Rings: The Return of the King",
+          "The Lion King",
+          "Ghostbusters"
+        ],
+        "Drink": [
+          "Ouzo",
+          "Gin",
+          "Soju",
+          "Absinthe"
+        ],
+        "MusicGenre": [
+          "Jazz",
+          "Folk",
+          "R&B",
+          "Classical"
+        ],
+        "Favorite Subject": [
+          "History",
+          "Political Science",
+          "Chemistry",
+          "Environmental Science"
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "dimensions_correct": {
+          "Name": true,
+          "Height": false,
+          "Movie": false,
+          "Drink": false,
+          "MusicGenre": false,
+          "Favorite Subject": false
+        },
+        "num_correct_dimensions": 1,
+        "total_dimensions": 6,
+        "accuracy": 0.16666666666666666,
+        "errors": [
+          "Height: Incorrect values (predicted ['185', '150', '165', '190'], expected ['185', '190', '165', '150'])",
+          "Movie: Incorrect values (predicted ['Beverly Hills Cop', 'The Lord of the Rings: The Return of the King', 'The Lion King', 'Ghostbusters'], expected ['The Lord of the Rings: The Return of the King', 'Ghostbusters', 'The Lion King', 'Beverly Hills Cop'])",
+          "Drink: Incorrect values (predicted ['Ouzo', 'Gin', 'Soju', 'Absinthe'], expected ['Absinthe', 'Ouzo', 'Gin', 'Soju'])",
+          "MusicGenre: Incorrect values (predicted ['Jazz', 'Folk', 'R&B', 'Classical'], expected ['Folk', 'R&B', 'Classical', 'Jazz'])",
+          "Favorite Subject: Incorrect values (predicted ['History', 'Political Science', 'Chemistry', 'Environmental Science'], expected ['Political Science', 'Chemistry', 'Environmental Science', 'History'])"
+        ]
+      },
+      "success": true
+    },
+    {
+      "puzzle_id": 3004,
+      "prompt": "# Zebra Puzzle\n## Puzzle Setup\nThere are 4 persons, each with different attributes.\n\nThe dimensions and possible values are:\n- **Name**: Henry, William, Oscar, George\n- **LinePosition**: 1, 8, 4, 9\n- **BookTitle**: War and Peace, Dune, Wuthering Heights, Crime and Punishment\n- **FurnitureType**: Loveseat, Sideboard, Hammock, Coffee Table\n- **Food**: Tea, Cinnamon, Pasta, Licorice\n- **Profession**: Software Developer, Pharmacist, Data Analyst, Doctor\n\n## Clues\nUse the following 33 clues to determine the complete assignment:\n\n1. The person with LinePosition 1 does not have FurnitureType Sideboard.\n2. The person with FurnitureType Coffee Table also has Food Licorice.\n3. The person with Food Cinnamon also has BookTitle Dune.\n4. The person with FurnitureType Hammock also has Profession Data Analyst.\n5. The person with BookTitle Wuthering Heights also has Profession Data Analyst.\n6. The person with LinePosition 4 also has Profession Data Analyst.\n7. The person with FurnitureType Hammock also has Food Pasta.\n8. The person with Name Oscar also has BookTitle Wuthering Heights.\n9. The person with Food Licorice also has FurnitureType Coffee Table.\n10. The person with Food Cinnamon also has Name William.\n11. The person with Food Tea also has BookTitle War and Peace.\n12. The person with Name Henry does not have Food Pasta.\n13. The person with Food Cinnamon also has FurnitureType Sideboard.\n14. The person with Food Tea also has Name Henry.\n15. The person with Name Oscar also has FurnitureType Hammock.\n16. The person with Name Oscar also has Food Pasta.\n17. The person with Food Pasta also has LinePosition 4.\n18. The person with LinePosition 1 does not have BookTitle Crime and Punishment.\n19. The person with Name Henry does not have BookTitle Dune.\n20. The person with Profession Doctor also has FurnitureType Coffee Table.\n21. The person with LinePosition 9 also has BookTitle Crime and Punishment.\n22. The person with Name Oscar also has Food Pasta.\n23. The person with FurnitureType Coffee Table also has Name George.\n24. The person with BookTitle Crime and Punishment also has Name George.\n25. The person with Name William also has FurnitureType Sideboard.\n26. The person with BookTitle War and Peace also has Name Henry.\n27. The person with BookTitle Dune also has FurnitureType Sideboard.\n28. The person with Food Tea does not have BookTitle Dune.\n29. The person with Name Oscar does not have Food Cinnamon.\n30. The person with BookTitle War and Peace also has LinePosition 1.\n31. The person with BookTitle Wuthering Heights does not have FurnitureType Sideboard.\n32. The person with LinePosition 8 also has FurnitureType Sideboard.\n33. The person with Profession Software Developer also has Food Tea.\n\n## Question\nBased on the clues above, determine the complete solution.\nFor each dimension, provide the sequence of values corresponding to each person.\n\n## Output Format\nPlease provide your answer in the following format:\n\nName: [value1, value2, ...]\nLinePosition: [value1, value2, ...]\nBookTitle: [value1, value2, ...]\nFurnitureType: [value1, value2, ...]\nFood: [value1, value2, ...]\nProfession: [value1, value2, ...]\n\nProvide ONLY the solution in this exact format, no additional explanation.\n",
+      "response": "Name: [Henry, William, Oscar, George]\nLinePosition: [1, 8, 4, 9]\nBookTitle: [War and Peace, Dune, Wuthering Heights, Crime and Punishment]\nFurnitureType: [Loveseat, Sideboard, Hammock, Coffee Table]\nFood: [Tea, Cinnamon, Pasta, Licorice]\nProfession: [Software Developer, Pharmacist, Data Analyst, Doctor]",
+      "parsed_solution": {
+        "Name": [
+          "Henry",
+          "William",
+          "Oscar",
+          "George"
+        ],
+        "LinePosition": [
+          "1",
+          "8",
+          "4",
+          "9"
+        ],
+        "BookTitle": [
+          "War and Peace",
+          "Dune",
+          "Wuthering Heights",
+          "Crime and Punishment"
+        ],
+        "FurnitureType": [
+          "Loveseat",
+          "Sideboard",
+          "Hammock",
+          "Coffee Table"
+        ],
+        "Food": [
+          "Tea",
+          "Cinnamon",
+          "Pasta",
+          "Licorice"
+        ],
+        "Profession": [
+          "Software Developer",
+          "Pharmacist",
+          "Data Analyst",
+          "Doctor"
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "dimensions_correct": {
+          "Name": true,
+          "LinePosition": false,
+          "BookTitle": false,
+          "FurnitureType": false,
+          "Food": false,
+          "Profession": false
+        },
+        "num_correct_dimensions": 1,
+        "total_dimensions": 6,
+        "accuracy": 0.16666666666666666,
+        "errors": [
+          "LinePosition: Incorrect values (predicted ['1', '8', '4', '9'], expected ['8', '4', '1', '9'])",
+          "BookTitle: Incorrect values (predicted ['War and Peace', 'Dune', 'Wuthering Heights', 'Crime and Punishment'], expected ['Dune', 'Crime and Punishment', 'Wuthering Heights', 'War and Peace'])",
+          "FurnitureType: Incorrect values (predicted ['Loveseat', 'Sideboard', 'Hammock', 'Coffee Table'], expected ['Coffee Table', 'Sideboard', 'Hammock', 'Loveseat'])",
+          "Food: Incorrect values (predicted ['Tea', 'Cinnamon', 'Pasta', 'Licorice'], expected ['Cinnamon', 'Licorice', 'Pasta', 'Tea'])",
+          "Profession: Incorrect values (predicted ['Software Developer', 'Pharmacist', 'Data Analyst', 'Doctor'], expected ['Data Analyst', 'Software Developer', 'Pharmacist', 'Doctor'])"
+        ]
+      },
+      "success": true
+    }
+  ]
+}

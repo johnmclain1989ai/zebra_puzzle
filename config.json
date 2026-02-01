@@ -1,0 +1,9 @@
+{
+  "data_dir": "data",
+  "results_dir": "results",
+  "docs_dir": "docs",
+  "examples_dir": "examples",
+  "attribute_file": "data/attribute_entity.json",
+  "numbered_file": "data/numbered_entity.json",
+  "default_puzzle_file": "data/generated/zebra_puzzles_gurobi_100.json"
+}

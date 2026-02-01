@@ -1,0 +1,483 @@
+
+======================================================================
+LLM TESTING ON ZEBRA PUZZLES
+======================================================================
+Puzzles file: zebra_puzzles_gurobi_100.json
+Number of puzzles: 10
+Start time: 2026-02-01 12:12:13
+======================================================================
+
+
+[1/10] 
+======================================================================
+Testing Puzzle #3000
+======================================================================
+Dimensions: 3 persons, 5 dimensions
+Clues: 13
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 3 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Ulysses, Isaac, Albert
+- **LinePosition**: 1, 5, 3
+- **Interested HistoricalEvent**: Titanic Sinking, Vietnam War, The Black Death
+- **Phone Brand**: BQ, ZUK, Vivo
+- **FavoriteActor**: Daniel Day-Lewis, George Clooney, Tom Hanks
+
+## Clues
+Use the following 13 clues to determine the complete assignment:
+
+1. The person with FavoriteActor Daniel Day-Lewis also has...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Ulysses, Isaac, Albert]
+LinePosition: [1, 5, 3]
+Interested HistoricalEvent: [Titanic Sinking, The Black Death, Vietnam War]
+Phone Brand: [BQ, Vivo, ZUK]
+FavoriteActor: [Daniel Day-Lewis, Tom Hanks, George Clooney]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 40.00%
+Dimensions correct: 2/5
+
+Errors:
+  - LinePosition: Incorrect values (predicted ['1', '5', '3'], expected ['3', '1', '5'])
+  - Phone Brand: Incorrect values (predicted ['BQ', 'Vivo', 'ZUK'], expected ['Vivo', 'ZUK', 'BQ'])
+  - FavoriteActor: Incorrect values (predicted ['Daniel Day-Lewis', 'Tom Hanks', 'George Clooney'], expected ['Tom Hanks', 'Daniel Day-Lewis', 'George Clooney'])
+
+[2/10] 
+======================================================================
+Testing Puzzle #3001
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 20
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Bernard, Steven, George, Xavier
+- **Height**: 130, 145, 175, 135
+- **ShoeTypes**: Sneakers, Plain Toe Shoes, Wingtip Shoes, Brogue Shoes
+- **FavoriteBook**: Moby Dick, The Da Vinci Code, Crime and Punishment, Harry Potter and the Sorcerer's Stone
+- **Sport**: Windsurfing, Archery, Badminton, Kayaking
+- **FavoriteFashionDesigner**: Gianni Versace, Gucci, Marc Ja...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Bernard, Steven, George, Xavier]
+Height: [130, 145, 175, 135]
+ShoeTypes: [Plain Toe Shoes, Wingtip Shoes, Sneakers, Brogue Shoes]
+FavoriteBook: [Moby Dick, Crime and Punishment, The Da Vinci Code, Harry Potter and the Sorcerer's Stone]
+Sport: [Kayaking, Archery, Badminton, Windsurfing]
+FavoriteFashionDesigner: [Marc Jacobs, Gucci, Diane von Furstenberg, Gianni Versace]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 16.67%
+Dimensions correct: 1/6
+
+Errors:
+  - Height: Incorrect values (predicted ['130', '145', '175', '135'], expected ['175', '145', '130', '135'])
+  - ShoeTypes: Incorrect values (predicted ['Plain Toe Shoes', 'Wingtip Shoes', 'Sneakers', 'Brogue Shoes'], expected ['Sneakers', 'Wingtip Shoes', 'Brogue Shoes', 'Plain Toe Shoes'])
+  - FavoriteBook: Incorrect values (predicted ['Moby Dick', 'Crime and Punishment', 'The Da Vinci Code', "Harry Potter and the Sorcerer's Stone"], expected ['Moby Dick', "Harry Potter and the Sorcerer's Stone", 'The Da Vinci Code', 'Crime and Punishment'])
+  - Sport: Incorrect values (predicted ['Kayaking', 'Archery', 'Badminton', 'Windsurfing'], expected ['Windsurfing', 'Archery', 'Badminton', 'Kayaking'])
+  - FavoriteFashionDesigner: Incorrect values (predicted ['Marc Jacobs', 'Gucci', 'Diane von Furstenberg', 'Gianni Versace'], expected ['Diane von Furstenberg', 'Marc Jacobs', 'Gianni Versace', 'Gucci'])
+
+[3/10] 
+======================================================================
+Testing Puzzle #3002
+======================================================================
+Dimensions: 3 persons, 5 dimensions
+Clues: 12
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 3 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Robert, Ulysses, William
+- **House Num**: 2, 3, 10
+- **Food**: Burrito, Hamburger, Whiskey
+- **FavoriteFestival**: Bonnaroo, Glastonbury, Just for Laughs
+- **VideoGame**: Cyberpunk 2077, Dota 2, The Witcher 3: Wild Hunt
+
+## Clues
+Use the following 12 clues to determine the complete assignment:
+
+1. The person with VideoGame Dota 2 also has House Num 3.
+2. The pe...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Robert, Ulysses, William]
+House Num: [2, 3, 10]
+Food: [Hamburger, Burrito, Whiskey]
+FavoriteFestival: [Bonnaroo, Glastonbury, Just for Laughs]
+VideoGame: [Cyberpunk 2077, Dota 2, The Witcher 3: Wild Hunt]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 80.00%
+Dimensions correct: 4/5
+
+Errors:
+  - Food: Incorrect values (predicted ['Hamburger', 'Burrito', 'Whiskey'], expected ['Hamburger', 'Whiskey', 'Burrito'])
+
+[4/10] 
+======================================================================
+Testing Puzzle #3003
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 18
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Victor, Frank, Ulysses, George
+- **Height**: 185, 150, 165, 190
+- **Movie**: Beverly Hills Cop, The Lord of the Rings: The Return of the King, The Lion King, Ghostbusters
+- **Drink**: Ouzo, Gin, Soju, Absinthe
+- **MusicGenre**: Jazz, Folk, R&B, Classical
+- **Favorite Subject**: History, Political Science, Chemistry, Environmental Science
+
+## Clues
+Use the follo...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Victor, Frank, Ulysses, George]
+Height: [185, 150, 165, 190]
+Movie: [Beverly Hills Cop, The Lord of the Rings: The Return of the King, The Lion King, Ghostbusters]
+Drink: [Ouzo, Gin, Soju, Absinthe]
+MusicGenre: [Jazz, Folk, R&B, Classical]
+Favorite Subject: [History, Political Science, Chemistry, Environmental Science]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 16.67%
+Dimensions correct: 1/6
+
+Errors:
+  - Height: Incorrect values (predicted ['185', '150', '165', '190'], expected ['185', '190', '165', '150'])
+  - Movie: Incorrect values (predicted ['Beverly Hills Cop', 'The Lord of the Rings: The Return of the King', 'The Lion King', 'Ghostbusters'], expected ['The Lord of the Rings: The Return of the King', 'Ghostbusters', 'The Lion King', 'Beverly Hills Cop'])
+  - Drink: Incorrect values (predicted ['Ouzo', 'Gin', 'Soju', 'Absinthe'], expected ['Absinthe', 'Ouzo', 'Gin', 'Soju'])
+  - MusicGenre: Incorrect values (predicted ['Jazz', 'Folk', 'R&B', 'Classical'], expected ['Folk', 'R&B', 'Classical', 'Jazz'])
+  - Favorite Subject: Incorrect values (predicted ['History', 'Political Science', 'Chemistry', 'Environmental Science'], expected ['Political Science', 'Chemistry', 'Environmental Science', 'History'])
+
+[5/10] 
+======================================================================
+Testing Puzzle #3004
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 33
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Henry, William, Oscar, George
+- **LinePosition**: 1, 8, 4, 9
+- **BookTitle**: War and Peace, Dune, Wuthering Heights, Crime and Punishment
+- **FurnitureType**: Loveseat, Sideboard, Hammock, Coffee Table
+- **Food**: Tea, Cinnamon, Pasta, Licorice
+- **Profession**: Software Developer, Pharmacist, Data Analyst, Doctor
+
+## Clues
+Use the following 33 clues to determ...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Henry, William, Oscar, George]  
+LinePosition: [1, 8, 4, 9]  
+BookTitle: [War and Peace, Dune, Wuthering Heights, Crime and Punishment]  
+FurnitureType: [Loveseat, Sideboard, Hammock, Coffee Table]  
+Food: [Tea, Cinnamon, Pasta, Licorice]  
+Profession: [Software Developer, Pharmacist, Data Analyst, Doctor]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 16.67%
+Dimensions correct: 1/6
+
+Errors:
+  - LinePosition: Incorrect values (predicted ['1', '8', '4', '9'], expected ['8', '4', '1', '9'])
+  - BookTitle: Incorrect values (predicted ['War and Peace', 'Dune', 'Wuthering Heights', 'Crime and Punishment'], expected ['Dune', 'Crime and Punishment', 'Wuthering Heights', 'War and Peace'])
+  - FurnitureType: Incorrect values (predicted ['Loveseat', 'Sideboard', 'Hammock', 'Coffee Table'], expected ['Coffee Table', 'Sideboard', 'Hammock', 'Loveseat'])
+  - Food: Incorrect values (predicted ['Tea', 'Cinnamon', 'Pasta', 'Licorice'], expected ['Cinnamon', 'Licorice', 'Pasta', 'Tea'])
+  - Profession: Incorrect values (predicted ['Software Developer', 'Pharmacist', 'Data Analyst', 'Doctor'], expected ['Data Analyst', 'Software Developer', 'Pharmacist', 'Doctor'])
+
+[6/10] 
+======================================================================
+Testing Puzzle #3005
+======================================================================
+Dimensions: 3 persons, 5 dimensions
+Clues: 16
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 3 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Xavier, Michael, Edward
+- **LinePosition**: 1, 10, 4
+- **Food**: Beer, Gelato, Bagel
+- **College**: Harvard University, Sorbonne University, University of Sydney
+- **BookTitle**: The Catcher in the Rye, 1984, The Shining
+
+## Clues
+Use the following 16 clues to determine the complete assignment:
+
+1. The person with College University of Sydney also has Food Bage...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Xavier, Edward, Michael]
+LinePosition: [1, 4, 10]
+Food: [Beer, Bagel, Gelato]
+College: [Harvard University, University of Sydney, Sorbonne University]
+BookTitle: [The Catcher in the Rye, The Shining, 1984]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 20.00%
+Dimensions correct: 1/5
+
+Errors:
+  - Name: Incorrect values (predicted ['Xavier', 'Edward', 'Michael'], expected ['Xavier', 'Michael', 'Edward'])
+  - Food: Incorrect values (predicted ['Beer', 'Bagel', 'Gelato'], expected ['Bagel', 'Beer', 'Gelato'])
+  - College: Incorrect values (predicted ['Harvard University', 'University of Sydney', 'Sorbonne University'], expected ['Sorbonne University', 'University of Sydney', 'Harvard University'])
+  - BookTitle: Incorrect values (predicted ['The Catcher in the Rye', 'The Shining', '1984'], expected ['1984', 'The Catcher in the Rye', 'The Shining'])
+
+[7/10] 
+======================================================================
+Testing Puzzle #3006
+======================================================================
+Dimensions: 3 persons, 5 dimensions
+Clues: 11
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 3 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Robert, George, Nathan
+- **LinePosition**: 10, 9, 6
+- **ShoeTypes**: Snow Boots, Monk Straps, Espadrilles
+- **YouTubeChannel**: Liza Koshy, Dude Perfect, DanTDM
+- **Language**: Japanese, Russian, Thai
+
+## Clues
+Use the following 11 clues to determine the complete assignment:
+
+1. The person with Language Russian also has LinePosition 9.
+2. The person with YouTub...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [George, Robert, Nathan]
+LinePosition: [9, 10, 6]
+ShoeTypes: [Monk Straps, Snow Boots, Espadrilles]
+YouTubeChannel: [Dude Perfect, Liza Koshy, DanTDM]
+Language: [Russian, Japanese, Thai]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 0.00%
+Dimensions correct: 0/5
+
+Errors:
+  - Name: Incorrect values (predicted ['George', 'Robert', 'Nathan'], expected ['Robert', 'George', 'Nathan'])
+  - LinePosition: Incorrect values (predicted ['9', '10', '6'], expected ['10', '9', '6'])
+  - ShoeTypes: Incorrect values (predicted ['Monk Straps', 'Snow Boots', 'Espadrilles'], expected ['Snow Boots', 'Monk Straps', 'Espadrilles'])
+  - YouTubeChannel: Incorrect values (predicted ['Dude Perfect', 'Liza Koshy', 'DanTDM'], expected ['DanTDM', 'Dude Perfect', 'Liza Koshy'])
+  - Language: Incorrect values (predicted ['Russian', 'Japanese', 'Thai'], expected ['Thai', 'Japanese', 'Russian'])
+
+[8/10] 
+======================================================================
+Testing Puzzle #3007
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 32
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Kevin, Zachary, Victor, Charles
+- **Height**: 170, 145, 160, 165
+- **FavoriteCelebrity**: Brad Pitt, Miley Cyrus, Jennifer Lawrence, Will Smith
+- **Car Brand**: Tesla, Arrinera, Mazda, Zenvo
+- **JobTitle**: Consultant, Digital Marketing Specialist, Graphic Designer, Financial Analyst
+- **SocialMediaPlatform**: Viber, Flickr, Dailymotion, Clubhouse
+
+## Clues
+Use...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Kevin, Zachary, Victor, Charles]
+Height: [170, 145, 160, 165]
+FavoriteCelebrity: [Brad Pitt, Miley Cyrus, Jennifer Lawrence, Will Smith]
+Car Brand: [Tesla, Arrinera, Mazda, Zenvo]
+JobTitle: [Consultant, Digital Marketing Specialist, Graphic Designer, Financial Analyst]
+SocialMediaPlatform: [Viber, Flickr, Dailymotion, Clubhouse]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 33.33%
+Dimensions correct: 2/6
+
+Errors:
+  - FavoriteCelebrity: Incorrect values (predicted ['Brad Pitt', 'Miley Cyrus', 'Jennifer Lawrence', 'Will Smith'], expected ['Miley Cyrus', 'Jennifer Lawrence', 'Brad Pitt', 'Will Smith'])
+  - Car Brand: Incorrect values (predicted ['Tesla', 'Arrinera', 'Mazda', 'Zenvo'], expected ['Tesla', 'Zenvo', 'Arrinera', 'Mazda'])
+  - JobTitle: Incorrect values (predicted ['Consultant', 'Digital Marketing Specialist', 'Graphic Designer', 'Financial Analyst'], expected ['Financial Analyst', 'Digital Marketing Specialist', 'Consultant', 'Graphic Designer'])
+  - SocialMediaPlatform: Incorrect values (predicted ['Viber', 'Flickr', 'Dailymotion', 'Clubhouse'], expected ['Flickr', 'Dailymotion', 'Viber', 'Clubhouse'])
+
+[9/10] 
+======================================================================
+Testing Puzzle #3008
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 27
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Isaac, David, George, Albert
+- **Height**: 150, 160, 170, 145
+- **movie type**: action, drama, horror, sci-fi
+- **Sport**: Skateboarding, Baseball, Bobsleigh, Taekwondo
+- **MusicGenre**: R&B, Ska, Country, Funk
+- **MusicalInstrument**: Accordion, Trumpet, Flute, Tabla
+
+## Clues
+Use the following 27 clues to determine the complete assignment:
+
+1. The person with...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Isaac, David, George, Albert]
+Height: [150, 160, 170, 145]
+movie type: [action, sci-fi, horror, drama]
+Sport: [Skateboarding, Baseball, Bobsleigh, Taekwondo]
+MusicGenre: [Funk, R&B, Country, Ska]
+MusicalInstrument: [Accordion, Tabla, Flute, Trumpet]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 16.67%
+Dimensions correct: 1/6
+
+Errors:
+  - Height: Incorrect values (predicted ['150', '160', '170', '145'], expected ['160', '170', '150', '145'])
+  - movie type: Incorrect values (predicted ['action', 'sci-fi', 'horror', 'drama'], expected ['drama', 'horror', 'action', 'sci-fi'])
+  - Sport: Incorrect values (predicted ['Skateboarding', 'Baseball', 'Bobsleigh', 'Taekwondo'], expected ['Baseball', 'Taekwondo', 'Skateboarding', 'Bobsleigh'])
+  - MusicGenre: Incorrect values (predicted ['Funk', 'R&B', 'Country', 'Ska'], expected ['Ska', 'Funk', 'R&B', 'Country'])
+  - MusicalInstrument: Incorrect values (predicted ['Accordion', 'Tabla', 'Flute', 'Trumpet'], expected ['Flute', 'Accordion', 'Trumpet', 'Tabla'])
+
+[10/10] 
+======================================================================
+Testing Puzzle #3009
+======================================================================
+Dimensions: 4 persons, 6 dimensions
+Clues: 32
+
+Prompt sent to LLM:
+----------------------------------------------------------------------
+# Zebra Puzzle
+## Puzzle Setup
+There are 4 persons, each with different attributes.
+
+The dimensions and possible values are:
+- **Name**: Quentin, Kevin, Jack, Henry
+- **Height**: 135, 160, 145, 170
+- **BeverageBrand**: V8, 7UP, Monster Energy, Snapple
+- **HatTypes**: Kepi, Safari Hat, Bucket Hat, Sun Hat
+- **University**: University of Cambridge, University of California, Berkeley, London School of Economics, Tsinghua University
+- **VideoGame**: Among Us, Fortnite, Animal Crossing: New Horizons,...
+----------------------------------------------------------------------
+
+LLM Response:
+----------------------------------------------------------------------
+Name: [Quentin, Jack, Kevin, Henry]
+Height: [135, 145, 160, 170]
+BeverageBrand: [V8, Monster Energy, 7UP, Snapple]
+HatTypes: [Kepi, Bucket Hat, Safari Hat, Sun Hat]
+University: [University of Cambridge, London School of Economics, University of California, Berkeley, Tsinghua University]
+VideoGame: [Among Us, Animal Crossing: New Horizons, Fortnite, Grand Theft Auto V]
+----------------------------------------------------------------------
+
+Evaluation:
+Correct: False
+Accuracy: 16.67%
+Dimensions correct: 1/6
+
+Errors:
+  - Name: Incorrect values (predicted ['Quentin', 'Jack', 'Kevin', 'Henry'], expected ['Quentin', 'Kevin', 'Jack', 'Henry'])
+  - Height: Incorrect values (predicted ['135', '145', '160', '170'], expected ['160', '135', '170', '145'])
+  - HatTypes: Incorrect values (predicted ['Kepi', 'Bucket Hat', 'Safari Hat', 'Sun Hat'], expected ['Bucket Hat', 'Sun Hat', 'Safari Hat', 'Kepi'])
+  - University: Length mismatch (predicted 5, expected 4)
+  - VideoGame: Incorrect values (predicted ['Among Us', 'Animal Crossing: New Horizons', 'Fortnite', 'Grand Theft Auto V'], expected ['Fortnite', 'Among Us', 'Animal Crossing: New Horizons', 'Grand Theft Auto V'])
+
+======================================================================
+TESTING SUMMARY
+======================================================================
+Total puzzles: 10
+Successful responses: 10
+Completely correct: 0
+Success rate: 0.0%
+Average accuracy: 25.7%
+End time: 2026-02-01 12:13:10
+
+Results saved to: llm_test_results_20260201_121310.json
+======================================================================
+
