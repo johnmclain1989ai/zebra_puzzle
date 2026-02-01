@@ -176,6 +176,29 @@ def check_solution_count(m):
     return m.SolCount, 'OPTIMAL'
 
 
+def format_clue(ctype, r_name, c_name, r1_name, c1_name, sign=None):
+    """
+    Render a human-readable clue string.
+
+    :param ctype: "PositionalTwo" or "NonPositional"
+    :param r_name: Name of the first attribute group
+    :param c_name: Attribute value in the first group
+    :param r1_name: Name of the second attribute group
+    :param c1_name: Attribute value in the second group
+    :param sign: "positive" or "negative" for NonPositional
+    """
+    if ctype == "PositionalTwo":
+        return (
+            f"From left to right, the person with {r_name} {c_name} is immediately left "
+            f"of the person with {r1_name} {c1_name}."
+        )
+    if ctype == "NonPositional":
+        if sign == "positive":
+            return f"The person with {r_name} {c_name} also has {r1_name} {c1_name}."
+        return f"The person with {r_name} {c_name} does not have {r1_name} {c1_name}."
+    raise ValueError(f"Unsupported clue type: {ctype}")
+
+
 def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint):
     """
     Convert a high-level puzzle constraint (e.g., 'PositionalTwo' or 'NonPositional')
@@ -204,21 +227,9 @@ def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint)
 
         v = int(var_name_lst[rPos][c1]) - int(var_name_lst[rPos][c2])
 
-        s = f"The sequence of the persons in dimension {dim_names[rPos]} from left to right, smallest to largest."
-
-        if v < 0:
-            if v == -1:
-                position = "directly to the left of "
-            else:
-                position = "to the left of "
-        else:
-            if v == 1:
-                position = "directly to the right of "
-            else:
-                position = "to the right of "
-
-        descriptions.append(f"{s} The person with dimension {r1_name} = {c1_name} is {position} "
-                            f"the person of dimension {r2_name} = {c2_name}")
+        descriptions.append(
+            format_clue("PositionalTwo", r1_name, c1_name, r2_name, c2_name)
+        )
 
         # code for model
 
@@ -244,8 +255,14 @@ def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint)
         _, c, r, r1, sign = constraint
         if sign == 'positive':
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"also has dimension {dim_names[r1]}={var_name_lst[r1][c]}"
+                format_clue(
+                    "NonPositional",
+                    dim_names[r],
+                    var_name_lst[r][c],
+                    dim_names[r1],
+                    var_name_lst[r1][c],
+                    sign="positive",
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] == var[p][r1][c])
@@ -255,8 +272,14 @@ def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint)
             c1 = random.choice([i for i in range(len(matrix[0])) if i != c])
 
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"do not has dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+                format_clue(
+                    "NonPositional",
+                    dim_names[r],
+                    var_name_lst[r][c],
+                    dim_names[r1],
+                    var_name_lst[r1][c1],
+                    sign="negative",
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] + var[p][r1][c1] <= 1)
@@ -544,4 +567,3 @@ if __name__ == '__main__':
     # random.seed(975)
 
     main()
-

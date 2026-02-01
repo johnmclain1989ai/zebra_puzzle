@@ -19,6 +19,11 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import zebra_abs_pro
 
 
+def format_clue(ctype, r_name, c_name, r1_name, c1_name, sign=None):
+    """Proxy to zebra_abs_pro.format_clue for consistent clue phrasing."""
+    return zebra_abs_pro.format_clue(ctype, r_name, c_name, r1_name, c1_name, sign=sign)
+
+
 def add_constraint_to_model_FIXED(m, var, matrix, dim_names, var_name_lst, constraint):
     """
     FIXED VERSION: Correctly encode positional constraints.
@@ -40,22 +45,9 @@ def add_constraint_to_model_FIXED(m, var, matrix, dim_names, var_name_lst, const
         r2_name = dim_names[r2]
 
         v = int(var_name_lst[rPos][c1]) - int(var_name_lst[rPos][c2])
-
-        s = f"The sequence of the persons in dimension {dim_names[rPos]} from left to right, smallest to largest."
-
-        if v < 0:
-            if v == -1:
-                position = "directly to the left of "
-            else:
-                position = "to the left of "
-        else:
-            if v == 1:
-                position = "directly to the right of "
-            else:
-                position = "to the right of "
-
-        descriptions.append(f"{s} The person with dimension {r1_name} = {c1_name} is {position} "
-                            f"the person of dimension {r2_name} = {c2_name}")
+        descriptions.append(
+            format_clue("PositionalTwo", r1_name, c1_name, r2_name, c2_name)
+        )
 
         # FIXED CODE: Calculate actual positions
         num_persons = len(matrix[0])
@@ -85,16 +77,28 @@ def add_constraint_to_model_FIXED(m, var, matrix, dim_names, var_name_lst, const
         _, c, r, r1, sign = constraint
         if sign == 'positive':
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"also has dimension {dim_names[r1]}={var_name_lst[r1][c]}"
+                format_clue(
+                    "NonPositional",
+                    dim_names[r],
+                    var_name_lst[r][c],
+                    dim_names[r1],
+                    var_name_lst[r1][c],
+                    sign="positive",
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] == var[p][r1][c])
         else:
             c1 = random.choice([i for i in range(len(matrix[0])) if i != c])
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"do not has dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+                format_clue(
+                    "NonPositional",
+                    dim_names[r],
+                    var_name_lst[r][c],
+                    dim_names[r1],
+                    var_name_lst[r1][c1],
+                    sign="negative",
+                )
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] + var[p][r1][c1] <= 1)
