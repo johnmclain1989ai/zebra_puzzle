@@ -176,6 +176,18 @@ def check_solution_count(m):
     return m.SolCount, 'OPTIMAL'
 
 
+def format_nonpositional_clue(dim_names, var_name_lst, r, c, r1, c1, sign):
+    """
+    Format a non-positional clue for a specific person/attribute pairing.
+    """
+    base = (f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} ")
+    if sign == 'positive':
+        return f"{base}also has dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+    if sign == 'negative':
+        return f"{base}does not have dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+    raise ValueError(f"Unsupported sign: {sign}")
+
+
 def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint):
     """
     Convert a high-level puzzle constraint (e.g., 'PositionalTwo' or 'NonPositional')
@@ -244,8 +256,7 @@ def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint)
         _, c, r, r1, sign = constraint
         if sign == 'positive':
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"also has dimension {dim_names[r1]}={var_name_lst[r1][c]}"
+                format_nonpositional_clue(dim_names, var_name_lst, r, c, r1, c, 'positive')
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] == var[p][r1][c])
@@ -255,8 +266,7 @@ def add_constraint_to_model(m, var, matrix, dim_names, var_name_lst, constraint)
             c1 = random.choice([i for i in range(len(matrix[0])) if i != c])
 
             descriptions.append(
-                f"The person with dimension {dim_names[r]}={var_name_lst[r][c]} "
-                f"do not has dimension {dim_names[r1]}={var_name_lst[r1][c1]}"
+                format_nonpositional_clue(dim_names, var_name_lst, r, c, r1, c1, 'negative')
             )
             for p in range(len(matrix[0])):
                 m.addConstr(var[p][r][c] + var[p][r1][c1] <= 1)
@@ -544,4 +554,3 @@ if __name__ == '__main__':
     # random.seed(975)
 
     main()
-
