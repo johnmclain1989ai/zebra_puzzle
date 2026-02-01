@@ -4,6 +4,7 @@ from gurobipy import Model, GRB, quicksum
 from util.query_gpt import query_4o_db as query_gpt
 from util.query_gpt import query_claude as query_claude
 from util.query_seek import query as query_seek
+from prompt_formatting import build_entities, format_setup_string
 
 # -------------------------------------------------------------------------------
 # Constants or configuration can go here
@@ -531,13 +532,14 @@ example 5:
 
     # entities
     # need to shuffle the entities
-    entities = { k: random.shuffle(v) for k, v in zip(dim_names, var_name_lst)}
+    entities = build_entities(dim_names, var_name_lst)
+    setup_text = format_setup_string(entities)
 
     # input
     input_text = f"""
 You are given a puzzle setup and a set of clues. Your task is to rewrite the clues in clear, natural‐sounding language, matching the style and structure shown in the example clues.
 Puzzle Setup:
-    {entities},
+    {setup_text},
 Clues:
     {cons_descriptions}
 Examples:
